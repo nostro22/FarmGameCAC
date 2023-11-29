@@ -89,33 +89,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Aim"",
-                    ""type"": ""Value"",
-                    ""id"": ""8699c7c0-ece1-49a9-82c9-19f8bcb305fc"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""PreviusItem"",
-                    ""type"": ""Button"",
-                    ""id"": ""c16c72f6-091a-47b6-9d09-3ed7dfdd2db2"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""NextItem"",
-                    ""type"": ""Button"",
-                    ""id"": ""e41b7ea4-a3c8-4f5f-a713-0bac6722fe41"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -239,39 +212,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0ee9828b-80b2-4ab0-9eb3-a41dccc9220f"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Aim"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8c6c9021-d2ec-46c6-a422-b67b00c0a18d"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""PreviusItem"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""725f954a-6fd5-4f30-a050-93c17d4038c7"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""NextItem"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -287,9 +227,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Interaction = m_Player.FindAction("Interaction", throwIfNotFound: true);
         m_Player_TimeJump = m_Player.FindAction("TimeJump", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
-        m_Player_PreviusItem = m_Player.FindAction("PreviusItem", throwIfNotFound: true);
-        m_Player_NextItem = m_Player.FindAction("NextItem", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -358,9 +295,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interaction;
     private readonly InputAction m_Player_TimeJump;
     private readonly InputAction m_Player_Pause;
-    private readonly InputAction m_Player_Aim;
-    private readonly InputAction m_Player_PreviusItem;
-    private readonly InputAction m_Player_NextItem;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -372,9 +306,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Interaction => m_Wrapper.m_Player_Interaction;
         public InputAction @TimeJump => m_Wrapper.m_Player_TimeJump;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
-        public InputAction @Aim => m_Wrapper.m_Player_Aim;
-        public InputAction @PreviusItem => m_Wrapper.m_Player_PreviusItem;
-        public InputAction @NextItem => m_Wrapper.m_Player_NextItem;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -405,15 +336,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
-            @Aim.started += instance.OnAim;
-            @Aim.performed += instance.OnAim;
-            @Aim.canceled += instance.OnAim;
-            @PreviusItem.started += instance.OnPreviusItem;
-            @PreviusItem.performed += instance.OnPreviusItem;
-            @PreviusItem.canceled += instance.OnPreviusItem;
-            @NextItem.started += instance.OnNextItem;
-            @NextItem.performed += instance.OnNextItem;
-            @NextItem.canceled += instance.OnNextItem;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -439,15 +361,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
-            @Aim.started -= instance.OnAim;
-            @Aim.performed -= instance.OnAim;
-            @Aim.canceled -= instance.OnAim;
-            @PreviusItem.started -= instance.OnPreviusItem;
-            @PreviusItem.performed -= instance.OnPreviusItem;
-            @PreviusItem.canceled -= instance.OnPreviusItem;
-            @NextItem.started -= instance.OnNextItem;
-            @NextItem.performed -= instance.OnNextItem;
-            @NextItem.canceled -= instance.OnNextItem;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -474,8 +387,5 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnInteraction(InputAction.CallbackContext context);
         void OnTimeJump(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnAim(InputAction.CallbackContext context);
-        void OnPreviusItem(InputAction.CallbackContext context);
-        void OnNextItem(InputAction.CallbackContext context);
     }
 }

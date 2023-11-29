@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+//using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,10 +11,14 @@ public class Cronometre : MonoBehaviour {
     public StringReference actualCicle;
     public bool ResetTiempo;
     public UnityEvent StartDay;
-    public UnityEvent StartNigth;
+    public UnityEvent StartNight;
+    
     // Start is called before the first frame update
     void Start() {
         tiempoRestante = float.Parse(tiempoCiclo.Value);
+        //Debug.Log(tiempoRestante);
+        StartDay.Invoke();
+        Debug.Log("Invoque día.");
     }
 
     // Update is called once per frame
@@ -23,7 +27,19 @@ public class Cronometre : MonoBehaviour {
         tiempoUI.Value = tiempoRestante.ToString();
 
         if (tiempoRestante <= 0) {
-            print("calor" +actualCicle.Value);
+            ResetTiempo = !ResetTiempo;
+            tiempoRestante = float.Parse(tiempoCiclo.Value);
+
+            if (ResetTiempo) {
+                StartNight.Invoke();
+                Debug.Log("Invoque noche.");
+            }
+            else {
+                StartDay.Invoke();
+                Debug.Log("Invoque día.");
+            }
+
+            /*print("calor" + actualCicle.Value);
             if (actualCicle.Value =="Dia") {
                 tiempoRestante = float.Parse(tiempoCiclo.Value);
                 print("invoque noche");
@@ -32,7 +48,7 @@ public class Cronometre : MonoBehaviour {
                 tiempoRestante = float.Parse(tiempoCiclo.Value);
                 print("invoque dia");
                 StartDay.Invoke();
-            }
+            }*/
         }
     }
 }

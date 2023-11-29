@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4313e4a3f5a0a664d9e072b1b8227db5, type: 3}
-  m_Name: TiempoCiclo
+  m_Script: {fileID: 11500000, guid: db1c56e55f39a6a4497e576288320d99, type: 3}
+  m_Name: OnNightEnter
   m_EditorClassIdentifier: 
-  value: 5

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - melee
   - range
+  - Undefined
+  - Timer
   layers:
   - Default
   - TransparentFX
@@ -43,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Planta
+    uniqueID: 619248271
+    locked: 0
   - name: Layer 1
     uniqueID: 2425651459
     locked: 0
@@ -51,4 +56,7 @@ TagManager:
     locked: 0
   - name: Layer 3
     uniqueID: 4189426099
+    locked: 0
+  - name: Player
+    uniqueID: 1406858539
     locked: 0

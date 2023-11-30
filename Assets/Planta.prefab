@@ -15,8 +15,11 @@ GameObject:
   - component: {fileID: -1548719012987381569}
   - component: {fileID: -4549488602074896610}
   - component: {fileID: 2037147410283243108}
+  - component: {fileID: -8946450815493134004}
   - component: {fileID: 2782579102405974679}
-  m_Layer: 7
+  - component: {fileID: -6085295827585298158}
+  - component: {fileID: 3751945790719715057}
+  m_Layer: 6
   m_Name: Planta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 619248271
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 649809171, guid: cb801aaaf83eaa9418318006f5c15c7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -209,6 +212,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -8946450815493134004}
+        m_TargetAssemblyTypeName: PlantaPoder, Assembly-CSharp
+        m_MethodName: poder
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2037147410283243108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +252,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-8946450815493134004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081213901243816359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da93c4310ef3b644881e1f1333b1f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantaCiclo: {fileID: -1548719012987381569}
+  poderTotal: 1000
 --- !u!114 &2782579102405974679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,3 +280,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantaAnimator: {fileID: 6337451199194358105}
   plantaCiclo: {fileID: -1548719012987381569}
+--- !u!114 &-6085295827585298158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081213901243816359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 022c777f19afb8a419c0198d100cb24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
+  ResetHP: 0
+  StartingHP:
+    UseConstant: 1
+    ConstantValue: 100
+    Variable: {fileID: 0}
+  DamageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e45a0a6223dce9248b3be5f30f0c4540, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ed03db09037ffc1409e97f091b00dbd6, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  plantaOro: {fileID: 0}
+--- !u!114 &3751945790719715057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081213901243816359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef75c8e024e60644aa4063691bf1a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantaCiclo: {fileID: -1548719012987381569}
+  oroTotal: 300
+  dead: 0

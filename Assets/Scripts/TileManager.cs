@@ -59,7 +59,7 @@ public class TileManager : MonoBehaviour
                 posicionAnterior = posicionActual; //Se actualiza la posición anterior.
             }
 
-            if (Input.GetKeyDown(KeyCode.F)) {
+            if (Input.GetKeyDown(KeyCode.F)) { //Cultivar.
                 //Según lo seleccionado en el inventario, esto debería realizar diferentes acciones (por ej.: el tipo de semilla a plantar).
                 //Si ya hay algo plantado, deberías tener la opción de "sacrificar" la planta. Supongo que habría que ver si hay algo plantado en esa posición, primero. ¿Pero cómo? USAR EL RAYCAST.
                 Vector3 gridCellCenter = new Vector3(posicionActual.x + puntoMedio, posicionActual.y, 0); //Posición del jugador pero en una celda de la grilla, centrada para evitar el offset de la planta.
@@ -68,6 +68,15 @@ public class TileManager : MonoBehaviour
                 if (hit.collider == null) { //Si el raycast no encuentra nada en el layer "Planta"...
                     _planta.GetComponent<SpriteRenderer>().sortingOrder = -(int)gridCellCenter.y;
                     Instantiate(_planta, gridCellCenter, Quaternion.identity); //Instanciar planta.
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.G)) { //Sacrificar.
+                Vector3 gridCellCenter = new Vector3(posicionActual.x + puntoMedio, posicionActual.y, 0); //Posición del jugador pero en una celda de la grilla, centrada para evitar el offset de la planta.
+                Vector2 posicionActual2d = new Vector2(gridCellCenter.x, gridCellCenter.y); //Pasar la posición a 2d para el raycast.
+                RaycastHit2D hit = Physics2D.Raycast(posicionActual2d, Vector2.up, distanciaRaycast, layerMask);
+                if (hit.collider != null) { //Si el raycast encuentra algo en el layer "Planta"...
+                    GameObject plantaASacrificar = hit.transform.gameObject;
+                    plantaASacrificar.GetComponent<PlantaOro>().dead = true;
                 }
             }
             posicionAnteriorFloat = jugador.transform.position; //Se actualiza la posición anterior.

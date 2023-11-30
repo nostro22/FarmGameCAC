@@ -12,6 +12,7 @@ public class UnitHealth : MonoBehaviour
     public FloatReference StartingHP;
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
+    [SerializeField] private PlantaOro plantaOro;
 
     private void Start() {
         if (ResetHP)
@@ -27,7 +28,7 @@ public class UnitHealth : MonoBehaviour
         }
 
         if (HP.Value <= 0.0f) {
-            DeathEvent.Invoke();
+            plantaOro.dead = true;
         }
     }
 }

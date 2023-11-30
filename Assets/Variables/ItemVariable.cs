@@ -8,14 +8,14 @@ public class ItemVariable : ScriptableObject {
     [Multiline]
     public string DeveloperDescription = "";
 #endif
-  [SerializeField]  private int cantity;
+    [SerializeField] private int quantity;
     [SerializeField] private string name;
     [SerializeField] private Sprite icon;
     [SerializeField] private int price;
 
-    public int Cantity {
-        get { return cantity; }
-        set { cantity = value; }
+    public int Quantity {
+        get { return quantity; }
+        set { quantity = value; }
     }
 
     public string Name {

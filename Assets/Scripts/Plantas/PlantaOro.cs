@@ -9,14 +9,10 @@ public class PlantaOro : MonoBehaviour
     private int etapa;
     private int oroADevolver;
     private int[] divisores;
-    public bool dead;
+    [SerializeField] private PlantaHP plantaHP;
 
     [SerializeField] private FloatVariable oro;
 
-    void Awake()
-    {
-        dead = false;
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +27,7 @@ public class PlantaOro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dead) { //Si la planta muere, devuelve el oro correspondiente según su nivel. ¿Ver de vincular con un scriptable object de oro?
+        if (plantaHP.dead) { //Si la planta muere, devuelve el oro correspondiente según su nivel. ¿Ver de vincular con un scriptable object de oro?
             etapa = plantaCiclo.etapa; //Guardo la etapa del script de ciclo.
 
             oroADevolver = oroTotal / divisores[etapa];

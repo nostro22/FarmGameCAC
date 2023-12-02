@@ -313,7 +313,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   plantaCiclo: {fileID: -1548719012987381569}
-  plantaOro: {fileID: 3751945790719715057}
+  dead: 0
   plantaPoder: {fileID: -8946450815493134004}
   playerHealth: {fileID: 11400000, guid: 865988d111b5fd24d827dc617c977b10, type: 2}
   plantHealth: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
@@ -360,5 +360,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantaCiclo: {fileID: -1548719012987381569}
   oroTotal: 300
-  dead: 0
+  plantaHP: {fileID: -6672134723712530258}
   oro: {fileID: 11400000, guid: 5cc5bef2a6262f84db317cfc1890bb63, type: 2}

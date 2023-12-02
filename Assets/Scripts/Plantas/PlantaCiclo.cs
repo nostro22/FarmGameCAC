@@ -14,7 +14,7 @@ public class PlantaCiclo : MonoBehaviour
     }
 
     public void dia() {
-        if (etapa <= 3) { //De momento sólo hay 4 etapas.
+        if (etapa <= 4) { //De momento sólo hay 4 etapas.
             etapa++; //Suma una etapa al inicio del día.
             Debug.Log("es De Dia: " + etapa);
         }

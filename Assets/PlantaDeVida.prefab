@@ -15,12 +15,12 @@ GameObject:
   - component: {fileID: -1548719012987381569}
   - component: {fileID: -4549488602074896610}
   - component: {fileID: 2037147410283243108}
+  - component: {fileID: -6672134723712530258}
   - component: {fileID: -8946450815493134004}
   - component: {fileID: 2782579102405974679}
-  - component: {fileID: -6085295827585298158}
   - component: {fileID: 3751945790719715057}
   m_Layer: 6
-  m_Name: Planta
+  m_Name: PlantaDeVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,6 +224,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -6672134723712530258}
+        m_TargetAssemblyTypeName: PlantaHP, Assembly-CSharp
+        m_MethodName: plantaVida
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2037147410283243108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +264,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-8946450815493134004
+--- !u!114 &-6672134723712530258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,39 +273,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6081213901243816359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8da93c4310ef3b644881e1f1333b1f4f, type: 3}
+  m_Script: {fileID: 11500000, guid: d5c49ecccf8dd32438c30c00505d0a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plantaCiclo: {fileID: -1548719012987381569}
-  poderTotal: 1000
---- !u!114 &2782579102405974679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6081213901243816359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7557abeb179ca3c42a5e0bb703e1eeee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plantaAnimator: {fileID: 6337451199194358105}
-  plantaCiclo: {fileID: -1548719012987381569}
---- !u!114 &-6085295827585298158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6081213901243816359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022c777f19afb8a419c0198d100cb24c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
-  ResetHP: 0
+  HP: 100
+  ResetHP: 1
   StartingHP:
     UseConstant: 1
     ConstantValue: 100
@@ -328,7 +312,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  plantaCiclo: {fileID: -1548719012987381569}
   plantaOro: {fileID: 3751945790719715057}
+  plantaPoder: {fileID: -8946450815493134004}
+  playerHealth: {fileID: 11400000, guid: 865988d111b5fd24d827dc617c977b10, type: 2}
+  plantHealth: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
+--- !u!114 &-8946450815493134004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081213901243816359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da93c4310ef3b644881e1f1333b1f4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantaCiclo: {fileID: -1548719012987381569}
+  poderTotal: 1000
+  poderActual: 0
+--- !u!114 &2782579102405974679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6081213901243816359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557abeb179ca3c42a5e0bb703e1eeee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantaAnimator: {fileID: 6337451199194358105}
+  plantaCiclo: {fileID: -1548719012987381569}
 --- !u!114 &3751945790719715057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,3 +361,4 @@ MonoBehaviour:
   plantaCiclo: {fileID: -1548719012987381569}
   oroTotal: 300
   dead: 0
+  oro: {fileID: 11400000, guid: 5cc5bef2a6262f84db317cfc1890bb63, type: 2}

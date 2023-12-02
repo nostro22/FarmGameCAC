@@ -11,6 +11,8 @@ public class PlantaOro : MonoBehaviour
     private int[] divisores;
     public bool dead;
 
+    [SerializeField] private FloatVariable oro;
+
     void Awake()
     {
         dead = false;
@@ -29,7 +31,7 @@ public class PlantaOro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dead) {
+        if (dead) { //Si la planta muere, devuelve el oro correspondiente según su nivel. ¿Ver de vincular con un scriptable object de oro?
             etapa = plantaCiclo.etapa; //Guardo la etapa del script de ciclo.
 
             oroADevolver = oroTotal / divisores[etapa];
@@ -38,6 +40,7 @@ public class PlantaOro : MonoBehaviour
                 Debug.Log("Devolver semilla.");
             } else {
                 Debug.Log("Devolver " + oroADevolver + " monedas de oro.");
+                oro.ApplyChange(oroADevolver);
             }
 
             Destroy(gameObject);

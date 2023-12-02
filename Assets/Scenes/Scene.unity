@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 37857786}
   - component: {fileID: 37857785}
   - component: {fileID: 37857787}
+  - component: {fileID: 37857788}
   m_Layer: 0
   m_Name: Player (BodyType = Kinematic)
   m_TagString: Player
@@ -270,10 +271,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: {fileID: 11400000, guid: 865988d111b5fd24d827dc617c977b10, type: 2}
+  startingPlantaHP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
   ResetHP: 1
   StartingHP:
     UseConstant: 1
-    ConstantValue: 30
+    ConstantValue: 0
     Variable: {fileID: 0}
   DamageEvent:
     m_PersistentCalls:
@@ -305,43 +307,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 37857778}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 619554228}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1489717005}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plantaOro: {fileID: 0}
 --- !u!114 &37857785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +430,34 @@ PolygonCollider2D:
       - {x: 0, y: -0.25}
       - {x: 0.5, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!114 &37857788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37857778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5409472042e040a0c6cdadcae9969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c82561cd93145e542b41b76c47fa9ece, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 37857778}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &539308173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,6 +2646,7 @@ GameObject:
   - component: {fileID: 619554231}
   - component: {fileID: 619554232}
   - component: {fileID: 619554233}
+  - component: {fileID: 619554234}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -2704,7 +2698,7 @@ MonoBehaviour:
   highlightMap: {fileID: 931008126}
   highlightTile: {fileID: 11400000, guid: 0cbca03a6f2aee54eb7fed4e77409ab8, type: 2}
   jugador: {fileID: 37857778}
-  _planta: {fileID: 6081213901243816359, guid: 8b1465f4af9677148963504f62e47c9c, type: 3}
+  _planta: {fileID: 6081213901243816359, guid: 953e1999626b7cb4e9fbc978169702dc, type: 3}
 --- !u!114 &619554232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2761,6 +2755,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &619554234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619554228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5409472042e040a0c6cdadcae9969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c82561cd93145e542b41b76c47fa9ece, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 619554228}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &649344134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2794,7 @@ GameObject:
   - component: {fileID: 649344135}
   - component: {fileID: 649344137}
   - component: {fileID: 649344136}
+  - component: {fileID: 649344138}
   m_Layer: 0
   m_Name: Timer
   m_TagString: Timer
@@ -2887,6 +2910,34 @@ MonoBehaviour:
   Text: {fileID: 1963616428}
   Variable: {fileID: 11400000, guid: 3675d601764075b4f9ff3f61a7dfb59b, type: 2}
   AlwaysUpdate: 1
+--- !u!114 &649344138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649344134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5409472042e040a0c6cdadcae9969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c82561cd93145e542b41b76c47fa9ece, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 649344134}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &675606589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,10 +3109,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  Max:
-    UseConstant: 1
-    ConstantValue: 30
-    Variable: {fileID: 0}
+  Max: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
   Image: {fileID: 732063584}
 --- !u!114 &702113729
 MonoBehaviour:
@@ -5162,7 +5210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1625629004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5176,10 +5224,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
+  startingPlantaHP: {fileID: 0}
   ResetHP: 1
   StartingHP:
     UseConstant: 1
-    ConstantValue: 100
+    ConstantValue: 0
     Variable: {fileID: 0}
   DamageEvent:
     m_PersistentCalls:
@@ -5198,32 +5247,7 @@ MonoBehaviour:
         m_CallState: 2
   DeathEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 94bf274c978b24a4db72f6a2b8589225, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1625629003}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plantaOro: {fileID: 0}
+      m_Calls: []
 --- !u!50 &1625629005
 Rigidbody2D:
   serializedVersion: 4
@@ -6006,7 +6030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277, y: 130}
+  m_AnchoredPosition: {x: 329, y: 130}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1981608825
@@ -6189,7 +6213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 277, y: 130}
+  m_AnchoredPosition: {x: 329, y: 130}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1995258827

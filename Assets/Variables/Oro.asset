@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20e8e2288be84b34297ce64a5c24a158, type: 3}
-  m_Name: PlantHealth
+  m_Name: Oro
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 7400
+  DeveloperDescription: Almacena el oro del jugador.
+  Value: 0

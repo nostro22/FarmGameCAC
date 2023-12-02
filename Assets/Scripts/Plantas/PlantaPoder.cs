@@ -7,7 +7,7 @@ public class PlantaPoder : MonoBehaviour
     [SerializeField] private PlantaCiclo plantaCiclo; //Consigo el script de ciclo de esta instancia.
     [SerializeField] private int poderTotal;
     private int etapa;
-    private int poderActual; //Determina el nivel de su poder de ataque, defensa, o de dar salud.
+    public int poderActual; //Determina el nivel de su poder de ataque, defensa, o de dar salud.
     private int[] divisores;
 
     // Start is called before the first frame update
@@ -28,9 +28,10 @@ public class PlantaPoder : MonoBehaviour
     public void poder()
     {
         etapa = plantaCiclo.etapa; //Guardo la etapa del script de ciclo.
+        if (etapa <= 3) {
+            poderActual = poderTotal / divisores[etapa];
 
-        poderActual = poderTotal / divisores[etapa];
-
-        Debug.Log("Tiene un poder de " + poderActual + ".");
+            Debug.Log("Tiene un poder de " + poderActual + ".");
+        }
     }
 }

@@ -1,56 +1,43 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UnitHealth : MonoBehaviour {
+public class UnitHealth : MonoBehaviour
+{
     public FloatVariable HP;
-    public bool ResetHP;
-    public FloatReference StartingHP;
-    [SerializeField] private bool CanBeHeal=false; 
-    [SerializeField] private bool CantakePlayerDamage=false;
-    public UnityEvent DamageEvent;
-    public UnityEvent HealEvent;
-    public UnityEvent DeathEvent;
+    public FloatVariable startingPlantaHP;
 
+    public bool ResetHP;
+    [SerializeField] private FloatReference StartingHP;
+    public UnityEvent DamageEvent;
+    public UnityEvent DeathEvent;
+    [SerializeField] private Cronometre cronometre;
 
     private void Start() {
-        if (ResetHP)
-            HP.SetValue(StartingHP);
+        if (ResetHP) { //Inicia el valor de la salud del jugador y el valor total de la salud de las plantas de vida en 0.
+            startingPlantaHP.SetValue(StartingHP.Value);
+            HP.SetValue(StartingHP.Value);
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        // Verifica si el objeto que caus� la colisi�n es un hijo del mismo objeto
-
-        if ((other.transform.CompareTag("range")|| other.transform.CompareTag("melee"))&& this.CompareTag("Player")) {
-            return;
+    private void Update()
+    {
+        if (cronometre.cantidadDeDias != 1 && cronometre.cantidadDeNoches != 0 && HP.Value == 0) {
+            DeathEvent?.Invoke();
         }
+    }
 
+    //Tengo entendido que lo unico que debería recibir daño son las plantas, así que probablemente haya que sacar esto.
+    //Si entendí mal, habría que ver que pasa si el jugador pierde más vida que las plantas. Podría ser un problema ya que comparten la vida.
+    //Igual de momento sirve bien para testear el daño.
+    private void OnTriggerEnter2D(Collider2D other) {
+        print("colisiono");
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-        if (damage != null && damage.DamageAmount>0 ) {
-            if (damage.CompareTag("Player") && !CantakePlayerDamage) {
-                return;
-            }
+        if (damage != null) {
             HP.ApplyChange(-damage.DamageAmount);
             DamageEvent.Invoke();
         }
-
-        if (HP.Value <= 0.0f) {
-            DeathEvent.Invoke();
-        }
-
-            Debug.Log(CanBeHeal);
-        if (CanBeHeal) {
-
-            HealDealer heal = other.gameObject.GetComponent<HealDealer>();
-            if (heal != null) {
-                if (HP.Value > 0.0f
-                    && (HP.Value + heal.HealAmount <= StartingHP)
-                    ) {
-                HP.ApplyChange(heal.HealAmount);
-                HealEvent.Invoke();
-                }
-            }
-        }
-
-
     }
 }

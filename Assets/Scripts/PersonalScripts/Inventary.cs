@@ -17,7 +17,7 @@ public class Inventary : MonoBehaviour {
     private int currentEquipedIndex;
 
     void Start() {
-        var firstPositiveItem = dayInventory.FirstOrDefault(item => item.Cantity > 0f);
+        var firstPositiveItem = dayInventory.FirstOrDefault(item => item.Quantity > 0f);
         if (firstPositiveItem != null) {
             currentEquipedItem = firstPositiveItem;
             updateUI(currentEquipedItem);
@@ -29,7 +29,7 @@ public class Inventary : MonoBehaviour {
             currentEquipedName.Value = displayItem.Name;
             currentEquipedImage.Value = displayItem.Icon;
             currentEquipedIndex = dayInventory.IndexOf(displayItem);
-            currentEquipCantity.Value = displayItem.Cantity.ToString();
+            currentEquipCantity.Value = displayItem.Quantity.ToString();
         } else {
             currentEquipedName.Value = "none";
             currentEquipedImage.Value = null;

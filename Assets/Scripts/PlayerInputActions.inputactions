@@ -70,30 +70,30 @@
                 },
                 {
                     "name": "Aim",
-                    "type": "Value",
-                    "id": "8699c7c0-ece1-49a9-82c9-19f8bcb305fc",
-                    "expectedControlType": "Vector2",
+                    "type": "Button",
+                    "id": "133d0eb6-0e8c-464d-9b79-b50e4e994596",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PreviousItem",
+                    "type": "Button",
+                    "id": "2e4bf214-3d95-4254-a0cd-7d23b8ad801f",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "PreviusItem",
-                    "type": "Button",
-                    "id": "c16c72f6-091a-47b6-9d09-3ed7dfdd2db2",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "NextItem",
                     "type": "Button",
-                    "id": "e41b7ea4-a3c8-4f5f-a713-0bac6722fe41",
+                    "id": "33f4e450-4071-4207-8284-4016715ee1d2",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -220,7 +220,7 @@
                 },
                 {
                     "name": "",
-                    "id": "0ee9828b-80b2-4ab0-9eb3-a41dccc9220f",
+                    "id": "935e9c3e-873a-4715-b3ee-82a00446dfd2",
                     "path": "",
                     "interactions": "",
                     "processors": "",
@@ -231,18 +231,18 @@
                 },
                 {
                     "name": "",
-                    "id": "8c6c9021-d2ec-46c6-a422-b67b00c0a18d",
+                    "id": "378145ea-b1a2-4fa9-932b-b24afd500d29",
                     "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "PreviusItem",
+                    "action": "PreviousItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "725f954a-6fd5-4f30-a050-93c17d4038c7",
+                    "id": "fa1271ef-2629-4707-8b71-0a953a2f5c18",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",

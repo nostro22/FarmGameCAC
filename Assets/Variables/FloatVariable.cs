@@ -13,9 +13,6 @@ public class FloatVariable : ScriptableObject {
     public void SetValue(float value) {
         Value = value;
     }
-    public float GetValue(float value) {
-        return value;
-    }
 
     public void SetValue(FloatVariable value) {
         Value = value.Value;

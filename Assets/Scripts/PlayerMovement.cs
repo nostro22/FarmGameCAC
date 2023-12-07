@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -48,14 +49,7 @@ public class PlayerMovement : MonoBehaviour
             canDash = true;
             moveSpeed = moveSpeed / 2;
             playerCollision = true;
-
         }
-
-
-
-        
-
-
     }
 
 
@@ -70,14 +64,14 @@ public class PlayerMovement : MonoBehaviour
         playerControls.Player.TimeJump.Enable();
         playerControls.Player.Pause.Enable();
         playerControls.Player.Aim.Enable();
-        playerControls.Player.PreviusItem.Enable();
+        playerControls.Player.PreviousItem.Enable();
         playerControls.Player.NextItem.Enable();
 
         playerControls.Player.Shoot.performed += OnShoot;
         playerControls.Player.Water.performed += OnWatering;
        playerControls.Player.Dash.performed += Dashing;
        playerControls.Player.Interaction.performed += Interacting;
-       playerControls.Player.PreviusItem.performed += OnNextItem;
+       playerControls.Player.PreviousItem.performed += OnNextItem;
        playerControls.Player.NextItem.performed += OnPreviusItem;
     }
 
@@ -155,9 +149,14 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
         
         //Animation
-        playerAnimator.SetFloat("Horizontal", moveX);
-        playerAnimator.SetFloat("Vertical", moveY);
-        playerAnimator.SetFloat("Speed", moveDirection.sqrMagnitude);
+
+        if (playerAnimator)
+        {
+            playerAnimator.SetFloat("Horizontal", moveX);
+            playerAnimator.SetFloat("Vertical", moveY);
+            playerAnimator.SetFloat("Speed", moveDirection.sqrMagnitude);
+            
+        }
         
         moveDirection = new Vector2(moveX, moveY);
     }

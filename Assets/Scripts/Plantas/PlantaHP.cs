@@ -59,10 +59,13 @@ public class PlantaHP : MonoBehaviour
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
         
         VelocidadAtaque velocidad = other.gameObject.GetComponent<VelocidadAtaque>();
-        delay = new WaitForSeconds(velocidad.velocidad);
+        if (velocidad)
+        {
+            delay = new WaitForSeconds(velocidad.velocidad);
 
-        if (damage != null) {
-            StartCoroutine(RecibirDano(damage, delay));
+            if (damage != null) {
+                StartCoroutine(RecibirDano(damage, delay));
+            }
         }
     }
 

@@ -25,7 +25,7 @@ public class UnitHealth : MonoBehaviour
     private void Update()
     {
         if (cronometre.cantidadDeDias != 1 && cronometre.cantidadDeNoches != 0 && HP.Value == 0) {
-            DeathEvent.Invoke();
+            DeathEvent?.Invoke();
         }
     }
 

@@ -5026,6 +5026,7 @@ GameObject:
   - component: {fileID: 37857787}
   - component: {fileID: 37857788}
   - component: {fileID: 37857789}
+  - component: {fileID: 37857790}
   m_Layer: 0
   m_Name: Player (BodyType = Kinematic)
   m_TagString: Player
@@ -5141,13 +5142,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: {fileID: 11400000, guid: 865988d111b5fd24d827dc617c977b10, type: 2}
+  startingPlantaHP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
   ResetHP: 1
   StartingHP:
     UseConstant: 1
     ConstantValue: 30
     Variable: {fileID: 0}
-  CanBeHeal: 0
-  CantakePlayerDamage: 0
   DamageEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5163,9 +5163,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  HealEvent:
-    m_PersistentCalls:
-      m_Calls: []
   DeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -5193,6 +5190,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  cronometre: {fileID: 2064881544}
 --- !u!114 &37857785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5249,7 +5247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 5dad1782627b5284a9fe592e8c7865a9, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f9a7f6a92ddbd444791ea6a373954604, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -5372,6 +5370,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &37857790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37857778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816f7c30eabdbe44897f45503650d6bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  meleeEquiped: 1
+  PlayerShootingEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerMeleeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerWateringEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerInteracEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerNextItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerPreviusItemEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  DashTime: 0.5
 --- !u!114 &147069055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6565,10 +6596,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0
     Variable: {fileID: 0}
-  Max:
-    UseConstant: 1
-    ConstantValue: 30
-    Variable: {fileID: 0}
+  Max: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
   Image: {fileID: 732063584}
 --- !u!114 &702113729
 MonoBehaviour:
@@ -8756,13 +8784,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
+  startingPlantaHP: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
   ResetHP: 1
   StartingHP:
     UseConstant: 1
     ConstantValue: 100
     Variable: {fileID: 0}
-  CanBeHeal: 1
-  CantakePlayerDamage: 0
   DamageEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8778,9 +8805,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  HealEvent:
-    m_PersistentCalls:
-      m_Calls: []
   DeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -8808,6 +8832,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  cronometre: {fileID: 2064881544}
 --- !u!50 &1625629005
 Rigidbody2D:
   serializedVersion: 4
@@ -9754,7 +9779,7 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 
     Variable: {fileID: 11400000, guid: 1e29ba7d30a64d64390bf3781255416f, type: 2}
-  ResetTiempo: 0
+  esDeDia: 0
   StartDay:
     m_PersistentCalls:
       m_Calls:
@@ -9770,21 +9795,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  StartNigth:
+  StartNight:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 6661983652ecc4640979a1fa01958ed4, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  cantidadDeDias: 0
+  cantidadDeNoches: 0
+  enemySpawner: {fileID: 0}
 --- !u!114 &2064881545
 MonoBehaviour:
   m_ObjectHideFlags: 0

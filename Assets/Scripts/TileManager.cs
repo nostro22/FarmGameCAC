@@ -38,21 +38,6 @@ public class TileManager : MonoBehaviour
         Vector3Int posicionActual = Vector3Int.FloorToInt(jugador.transform.position); //Guarda la posición actual del jugador y la redondea para abajo, así coincide con una celda de la grilla.
 
         if (esDeDia) {
-            /*Vector3 currentDirection = (jugador.transform.position-posicionAnteriorFloat).normalized;
-            if (currentDirection.x >= 0.01f && currentDirection.x >= currentDirection.y) {
-                direccionX = 1;
-                direccionY = 0;
-            } else if (currentDirection.x <= -0.01f && currentDirection.x <= currentDirection.y) {
-                direccionX = -1;
-                direccionY = 0;
-            } else if (currentDirection.y >= 0.01f && currentDirection.y >= currentDirection.x) {
-                direccionY = 1;
-                direccionX = 0;
-            } else if (currentDirection.y <= -0.01f && currentDirection.y <= currentDirection.x) {
-                direccionY = -1;
-                direccionX = 0;
-            }*/
-
             if (!posicionActual.Equals(posicionAnterior)) { //Si el jugador se mueve a otra celda de la grilla...
                 highlightMap.SetTile(posicionAnterior, null); //Se borra la tile resaltada de la posición anterior.
                 highlightMap.SetTile(posicionActual, highlightTile); //Se dibuja una celda resaltada en la posición actual.

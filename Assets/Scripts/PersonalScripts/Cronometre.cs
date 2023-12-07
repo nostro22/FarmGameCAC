@@ -9,12 +9,17 @@ public class Cronometre : MonoBehaviour {
     public StringVariable tiempoUI;
     public StringVariable tiempoCiclo;
     public StringReference actualCicle;
-    public bool ResetTiempo;
+    public bool esDeDia;
     public UnityEvent StartDay;
     public UnityEvent StartNight;
+    public int cantidadDeDias;
+    public int cantidadDeNoches;
+
+    [SerializeField] private EnemySpawner enemySpawner;
     
     // Start is called before the first frame update
     void Start() {
+        cantidadDeDias = cantidadDeNoches = 0;
         tiempoRestante = float.Parse(tiempoCiclo.Value);
         //Debug.Log(tiempoRestante);
         StartDay.Invoke();
@@ -23,34 +28,22 @@ public class Cronometre : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        tiempoRestante = (float)tiempoRestante - Time.deltaTime;
-        tiempoUI.Value = tiempoRestante.ToString();
+        if (esDeDia) {
+            tiempoRestante = (float)tiempoRestante - Time.deltaTime;
+            tiempoUI.Value = tiempoRestante.ToString();
 
-        if (tiempoRestante <= 0) {
-            ResetTiempo = !ResetTiempo;
-            tiempoRestante = float.Parse(tiempoCiclo.Value);
-
-            if (ResetTiempo) {
+            if (tiempoRestante <= 0) {
                 StartNight.Invoke();
-                Debug.Log("Invoque noche.");
+                cantidadDeNoches++;
+                esDeDia = false;
             }
-            else {
-                StartDay.Invoke();
-                Debug.Log("Invoque día.");
-            }
+        }
 
-            /*print("calor" + actualCicle.Value);
-            if (actualCicle.Value =="Dia") {
-                tiempoRestante = float.Parse(tiempoCiclo.Value);
-                print("invoque noche");
-                StartNigth.Invoke();
-            } else {
-                tiempoRestante = float.Parse(tiempoCiclo.Value);
-                print("invoque dia");
-                StartDay.Invoke();
-            }*/
+        if (!esDeDia && enemySpawner.cantidadRestante == 0) {
+            tiempoRestante = float.Parse(tiempoCiclo.Value);
+            StartDay.Invoke();
+            cantidadDeDias++;
+            esDeDia = true;
         }
     }
 }
-
-   

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class PlantaHP : MonoBehaviour
 {
-    [SerializeField] private float HP;
+    [SerializeField] public float HP;
 
     public bool ResetHP;
     public FloatReference StartingHP;
@@ -24,6 +24,8 @@ public class PlantaHP : MonoBehaviour
 
     [SerializeField] private FloatVariable playerHealth; //Salud del jugador.
     [SerializeField] private FloatVariable plantHealth; //Total de salud máxima de todas las plantas de vida.
+
+    WaitForSeconds delay;
 
     private void Awake() {
         dead = false;
@@ -45,20 +47,22 @@ public class PlantaHP : MonoBehaviour
             playerHealth.ApplyChange(-HP);
             plantHealth.ApplyChange(-totalHP);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) {
-        print("colisiono");
-        DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-        if (damage != null) {
-            HP -= damage.DamageAmount; //Daño aplicado a la propia planta.
-            playerHealth.ApplyChange(-damage.DamageAmount); //Daño aplicado al jugador.
-            DamageEvent.Invoke();
-        }
 
         if (HP <= 0) {
             dead = true; //La planta muere.
             DeathEvent.Invoke();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        //print("colisiono");
+        DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
+        
+        VelocidadAtaque velocidad = other.gameObject.GetComponent<VelocidadAtaque>();
+        delay = new WaitForSeconds(velocidad.velocidad);
+
+        if (damage != null) {
+            StartCoroutine(RecibirDano(damage, delay));
         }
     }
 
@@ -71,6 +75,16 @@ public class PlantaHP : MonoBehaviour
             plantHealth.ApplyChange(plantaPoder.poderActual);
             totalHP += plantaPoder.poderActual;
             Debug.Log("Tiene una vida de " + HP + ".");
+        }
+    }
+
+    IEnumerator RecibirDano(DamageDealer _damage, WaitForSeconds _delay)
+    {
+        while (HP > 0) {
+            HP -= _damage.DamageAmount; //Daño aplicado a la propia planta.
+            playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
+            DamageEvent.Invoke();
+            yield return _delay;
         }
     }
 }

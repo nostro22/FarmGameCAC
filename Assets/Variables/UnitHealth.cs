@@ -13,11 +13,19 @@ public class UnitHealth : MonoBehaviour
     [SerializeField] private FloatReference StartingHP;
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
+    [SerializeField] private Cronometre cronometre;
 
     private void Start() {
         if (ResetHP) { //Inicia el valor de la salud del jugador y el valor total de la salud de las plantas de vida en 0.
             startingPlantaHP.SetValue(StartingHP.Value);
             HP.SetValue(StartingHP.Value);
+        }
+    }
+
+    private void Update()
+    {
+        if (cronometre.cantidadDeDias != 1 && cronometre.cantidadDeNoches != 0 && HP.Value == 0) {
+            DeathEvent.Invoke();
         }
     }
 
@@ -30,10 +38,6 @@ public class UnitHealth : MonoBehaviour
         if (damage != null) {
             HP.ApplyChange(-damage.DamageAmount);
             DamageEvent.Invoke();
-        }
-
-        if (HP.Value <= 0.0f) {
-            DeathEvent.Invoke();
         }
     }
 }

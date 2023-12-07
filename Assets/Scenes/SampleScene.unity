@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: {fileID: 11400000, guid: 865988d111b5fd24d827dc617c977b10, type: 2}
+  startingPlantaHP: {fileID: 0}
   ResetHP: 1
   StartingHP:
     UseConstant: 1
@@ -369,6 +370,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  cronometre: {fileID: 0}
 --- !u!1 &1770544835
 GameObject:
   m_ObjectHideFlags: 0

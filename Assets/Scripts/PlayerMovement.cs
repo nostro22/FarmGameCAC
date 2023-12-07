@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection = Vector2.zero; //Atajo de (X:0;Y:0)
     private PlayerInputActions playerControls;
     public bool meleeEquiped = true;
+
+    public void PlayerIsMeleeEquip(bool meleeEquiped) {
+        this.meleeEquiped = meleeEquiped;
+    }
+
     [SerializeField] private SpriteRenderer spriteRenderer;
     public UnityEvent PlayerShootingEvent;
     public UnityEvent PlayerMeleeEvent;

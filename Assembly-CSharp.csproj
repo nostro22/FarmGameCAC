@@ -117,6 +117,7 @@
      <Compile Include="Assets\Scripts\Enemigos\EnemigoHP.cs" />
      <Compile Include="Assets\Scenes\Scenes\Scripts\VolumeManager.cs" />
      <Compile Include="Assets\Variables\ImageVariable.cs" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scenes\Scenes\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Variables\VelocidadAtaque.cs" />

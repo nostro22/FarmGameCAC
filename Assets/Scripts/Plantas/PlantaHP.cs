@@ -57,9 +57,9 @@ public class PlantaHP : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         //print("colisiono");
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-        
-        VelocidadAtaque velocidad = other.gameObject.GetComponent<VelocidadAtaque>();
-        if (velocidad)
+
+
+        if (other.TryGetComponent<VelocidadAtaque>(out var velocidad))
         {
             delay = new WaitForSeconds(velocidad.velocidad);
 

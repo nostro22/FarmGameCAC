@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -27,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool playerCollision;
     [SerializeField] private float DashTime=0.5f;
+    [SerializeField] private Transform targetToRotateFoward;
 
     private void Awake()
     {
@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Aplica la rotación al objeto
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        targetToRotateFoward.rotation = Quaternion.Euler(0f, 0f, angle);
         
         //Animation
 

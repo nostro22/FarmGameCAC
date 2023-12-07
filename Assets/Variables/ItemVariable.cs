@@ -8,7 +8,7 @@ public class ItemVariable : ScriptableObject {
     [Multiline]
     public string DeveloperDescription = "";
 #endif
-  [SerializeField]  private int cantity;
+    [SerializeField]  private int cantity;
     [SerializeField] private string name;
     [SerializeField] private Sprite icon;
     [SerializeField] private int price;

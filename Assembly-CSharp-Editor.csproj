@@ -60,8 +60,6 @@
   <ItemGroup>
     <Compile Include="Assets\Variables\Editor\FloatReferenceDrawer.cs" />
     <Compile Include="Assets\Events\Editor\EventEditor.cs" />
-    <Compile Include="Assets\RockVR\Video\Editor\VideoCaptureEditor.cs" />
-    <Compile Include="Assets\RockVR\Video\Editor\VideoCaptureMenuEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

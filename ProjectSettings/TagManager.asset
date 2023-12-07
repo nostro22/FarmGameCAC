@@ -6,6 +6,7 @@ TagManager:
   tags:
   - melee
   - range
+  - enemyHurtParticle
   layers:
   - Default
   - TransparentFX

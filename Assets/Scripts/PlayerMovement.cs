@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -12,12 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveDirection = Vector2.zero; //Atajo de (X:0;Y:0)
     private PlayerInputActions playerControls;
     public bool meleeEquiped = true;
-
+    private SpriteRenderer spriteRenderer;
+    private Animator playerAnimator;
+    
     public void PlayerIsMeleeEquip(bool meleeEquiped) {
         this.meleeEquiped = meleeEquiped;
     }
-
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    
     public UnityEvent PlayerShootingEvent;
     public UnityEvent PlayerMeleeEvent;
     public UnityEvent PlayerWateringEvent;
@@ -34,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
         playerControls = new PlayerInputActions();
     }
 
+    private void Start()
+    {
+        playerAnimator = GetComponent<Animator>();
+    }
 
     IEnumerator Dash() {
         playerCollision = false;
@@ -86,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         _rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        _rb.MovePosition(_rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime);
 
     }
 
@@ -132,9 +136,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
             Debug.Log("Avanza el tiempo y se bloquea la funcion al llegar a la noche");
 
-
-        moveDirection = new Vector2(moveX, moveY).normalized;
-
         //Aim Mouse
         // Obtiene la posición del mouse
 
@@ -152,5 +153,12 @@ public class PlayerMovement : MonoBehaviour
 
         // Aplica la rotación al objeto
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        
+        //Animation
+        playerAnimator.SetFloat("Horizontal", moveX);
+        playerAnimator.SetFloat("Vertical", moveY);
+        playerAnimator.SetFloat("Speed", moveDirection.sqrMagnitude);
+        
+        moveDirection = new Vector2(moveX, moveY);
     }
 }

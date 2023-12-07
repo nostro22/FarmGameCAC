@@ -1,39 +1,37 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class usingMelee : MonoBehaviour {
     [SerializeField] private Transform instanciatePlace;
-    [SerializeField] private float activeHitDuration;
-    [SerializeField] private float cooldown;
-    [SerializeField] private Vector2 ColliderScale;
-    public GameObject meleeItem;
+    [SerializeField] private MeleeWeaponVariable equipWeapon;
+    public GameObject meleeCollider;
     private BoxCollider2D boxCollider2D;
     private bool canUse;
 
     // Start is called before the first frame update
     void Start() {
-        boxCollider2D = meleeItem.GetComponent<BoxCollider2D>();
-            boxCollider2D.size = ColliderScale;
+        boxCollider2D = meleeCollider.GetComponent<BoxCollider2D>();
+        boxCollider2D.size = equipWeapon.ColliderScale;
         canUse = true;
     }
 
     private IEnumerator CooldownCoroutine() {
-        yield return new WaitForSeconds(cooldown);
+        yield return new WaitForSeconds(equipWeapon.CoolDown);
         canUse = true;
     }
 
-
+    public void setUpdateColliderSize() {
+        boxCollider2D.size = equipWeapon.ColliderScale;
+    }
     IEnumerator MeleeStart() {
-        if ( canUse) {
-            meleeItem.transform.SetPositionAndRotation(instanciatePlace.position, transform.parent.rotation);
+        if (canUse) {
+            meleeCollider.transform.SetPositionAndRotation(instanciatePlace.position, transform.parent.rotation);
             canUse = false;
-            meleeItem.SetActive(true);
+            meleeCollider.SetActive(true);
             yield return null;
             StartCoroutine(CooldownCoroutine());
-            yield return new WaitForSeconds(activeHitDuration);
-            meleeItem.SetActive(false);
+            yield return new WaitForSeconds(equipWeapon.HitDuration);
+            meleeCollider.SetActive(false);
         }
     }
 

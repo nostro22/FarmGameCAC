@@ -39,7 +39,7 @@ public class Cronometre : MonoBehaviour {
             }
         }
 
-        if (!esDeDia && enemySpawner.cantidadRestante == 0) {
+        if (!esDeDia && enemySpawner!=null && enemySpawner.cantidadRestante == 0) {
             tiempoRestante = float.Parse(tiempoCiclo.Value);
             StartDay.Invoke();
             cantidadDeDias++;

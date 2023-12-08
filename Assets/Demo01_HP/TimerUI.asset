@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4313e4a3f5a0a664d9e072b1b8227db5, type: 3}
   m_Name: TimerUI
   m_EditorClassIdentifier: 
-  value: Tiempo Restante 10
+  value: Tiempo 10

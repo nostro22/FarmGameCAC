@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20e8e2288be84b34297ce64a5c24a158, type: 3}
-  m_Name: EnemyHealth 1
+  m_Script: {fileID: 11500000, guid: db1c56e55f39a6a4497e576288320d99, type: 3}
+  m_Name: OnTimeSkip
   m_EditorClassIdentifier: 
-  DeveloperDescription: 
-  Value: 700

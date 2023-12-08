@@ -10,7 +10,14 @@ public class TileManager : MonoBehaviour
     [SerializeField] private Tilemap highlightMap = null; //Tilemap donde se ubicarán las tiles resaltadas.
     [SerializeField] private TileBase highlightTile = null; //La tile resaltada.
     [SerializeField] private GameObject jugador = null; //El jugador.
-    [SerializeField] private GameObject _planta = null; //La planta a instanciar.
+     private GameObject _planta = null; //La planta a instanciar.
+    [SerializeField] private GameObject _plantaVida = null; //La planta a instanciar.
+    [SerializeField] private GameObject _plantaTorreta = null; //La planta a instanciar.
+    [SerializeField] private GameObject _plantaMina = null; //La planta a instanciar.
+    [SerializeField] private GameObject _plantaGranada = null; //La planta a instanciar.
+    [SerializeField] private GameObject _fertilizante = null; //La planta a instanciar.
+    [SerializeField] private StringReference currentItemName = null;
+    [SerializeField] private StringReference currentItemQuantity = null;
 
     private Vector3Int posicionAnterior = new Vector3Int(); //Para guardar la posición anterior del jugador.
     Vector3 posicionAnteriorFloat = new Vector3();
@@ -50,7 +57,19 @@ public class TileManager : MonoBehaviour
                 Vector3 gridCellCenter = new Vector3(posicionActual.x + puntoMedio, posicionActual.y, 0); //Posición del jugador pero en una celda de la grilla, centrada para evitar el offset de la planta.
                 Vector2 posicionActual2d = new Vector2(gridCellCenter.x, gridCellCenter.y); //Pasar la posición a 2d para el raycast.
                 RaycastHit2D hit = Physics2D.Raycast(posicionActual2d, Vector2.up, distanciaRaycast, layerMask);
-                if (hit.collider == null) { //Si el raycast no encuentra nada en el layer "Planta"...
+                //Si el raycast no encuentra nada en el layer "Planta"...
+                if (hit.collider) { }
+
+                if (hit.collider == null && (int.Parse(currentItemQuantity.Value)>0)) {
+                    switch (currentItemName) {
+                        case "Planta Vida":
+                    print("planta cantidad "+ int.Parse(currentItemQuantity.Value));
+                            _planta = _plantaVida;
+                            break;
+                        
+                        default:
+                            break;
+                    }
                     _planta.GetComponent<SpriteRenderer>().sortingOrder = -(int)gridCellCenter.y;
                     Instantiate(_planta, gridCellCenter, Quaternion.identity); //Instanciar planta.
                 }

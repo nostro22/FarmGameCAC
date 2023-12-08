@@ -6,6 +6,9 @@ TagManager:
   tags:
   - melee
   - range
+  - enemyHurtParticle
+  - Timer
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -27,10 +30,10 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
+  - Planta
   - Layer 2
   - Layer 3
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -43,12 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Layer 1
+  - name: Plants
+    uniqueID: 4189426099
+    locked: 0
+  - name: Enemy
     uniqueID: 2425651459
     locked: 0
-  - name: Layer 2
+  - name: Player
     uniqueID: 4250941897
-    locked: 0
-  - name: Layer 3
-    uniqueID: 4189426099
     locked: 0

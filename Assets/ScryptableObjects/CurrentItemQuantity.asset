@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4313e4a3f5a0a664d9e072b1b8227db5, type: 3}
-  m_Name: CurrentItemCantity
+  m_Name: CurrentItemQuantity
   m_EditorClassIdentifier: 
   value: 

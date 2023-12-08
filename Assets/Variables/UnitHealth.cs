@@ -35,7 +35,7 @@ public class UnitHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         print("colisiono");
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-        if (damage != null) {
+        if (damage != null && other.CompareTag("Enemy")) {
             HP.ApplyChange(-damage.DamageAmount);
             DamageEvent.Invoke();
         }

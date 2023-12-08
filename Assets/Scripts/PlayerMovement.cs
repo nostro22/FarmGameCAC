@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public UnityEvent PlayerInteracEvent;
     public UnityEvent PlayerNextItemEvent;
     public UnityEvent PlayerPreviusItemEvent;
+    public UnityEvent PlayerTimeJump;
     private bool canDash = true;
     private bool playerCollision;
     [SerializeField] private float DashTime=0.5f;
@@ -66,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         playerControls.Player.Aim.Enable();
         playerControls.Player.PreviousItem.Enable();
         playerControls.Player.NextItem.Enable();
+        playerControls.Player.ChangeWeapon.Enable();
 
         playerControls.Player.Shoot.performed += OnShoot;
         playerControls.Player.Water.performed += OnWatering;
@@ -73,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
        playerControls.Player.Interaction.performed += Interacting;
        playerControls.Player.PreviousItem.performed += OnNextItem;
        playerControls.Player.NextItem.performed += OnPreviusItem;
+       playerControls.Player.ChangeWeapon.performed += OnChangeWeaponType;
+       playerControls.Player.TimeJump.performed += OnTimeJump;
     }
 
     private void OnDisable()
@@ -103,6 +107,11 @@ public class PlayerMovement : MonoBehaviour
         PlayerShootingEvent.Invoke();
         }
     }
+    private void OnChangeWeaponType(InputAction.CallbackContext context) {
+   
+           meleeEquiped = !meleeEquiped;
+        
+    }
     private void OnWatering(InputAction.CallbackContext context) {
         PlayerWateringEvent.Invoke();
     }
@@ -115,6 +124,10 @@ public class PlayerMovement : MonoBehaviour
     private void Dashing(InputAction.CallbackContext context) {
         StartCoroutine(Dash());
     }
+    private void OnTimeJump(InputAction.CallbackContext context) {
+        print("timejump call");
+        PlayerTimeJump.Invoke();
+    }
     private void Interacting(InputAction.CallbackContext context) {
         
         PlayerInteracEvent.Invoke();    
@@ -126,9 +139,6 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.T))
-            Debug.Log("Avanza el tiempo y se bloquea la funcion al llegar a la noche");
 
         //Aim Mouse
         // Obtiene la posición del mouse

@@ -22,8 +22,8 @@ public class bulletBehavior : MonoBehaviour
         this.gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision) {
-        print(collision.name);
         if (collision.CompareTag("Enemy")) {
+        print(collision.name);
             this.gameObject.SetActive(false);
         }
     }

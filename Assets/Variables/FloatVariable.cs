@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class FloatVariable : ScriptableObject {
+public class FloatVariable : BaseVariable{
 #if UNITY_EDITOR
     [Multiline]
     public string DeveloperDescription = "";
@@ -24,5 +24,9 @@ public class FloatVariable : ScriptableObject {
 
     public void ApplyChange(FloatVariable amount) {
         Value += amount.Value;
+    }
+
+    public override string GetValue() {
+       return Value.ToString();
     }
 }

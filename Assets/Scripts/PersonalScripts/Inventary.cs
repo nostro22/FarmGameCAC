@@ -39,7 +39,6 @@ public class Inventary : MonoBehaviour {
     }
 
     public void nextItem() {
-        print("next item");
         if (currentEquipedIndex + 1 < dayInventory.Count) {
             currentEquipedIndex++;
             currentEquipedItem = dayInventory[currentEquipedIndex];
@@ -62,9 +61,27 @@ public class Inventary : MonoBehaviour {
             currentEquipedIndex = dayInventory.Count-1;
             currentEquipedItem = dayInventory[currentEquipedIndex];
             updateUI(currentEquipedItem);
-
         }
+    }
+    public void equipItem(ItemVariable itemToEquip) {
+        //int index = dayInventory.FindIndex(item => item.Name ==itemToEquip.Name);
+
+        //if (index != -1) {
+        //    currentEquipedIndex = index;
+        //    currentEquipedItem = dayInventory[currentEquipedIndex];
+        //    updateUI(currentEquipedItem);
+        //}
+        updateUI(currentEquipedItem);
+    }
 
 
+
+    public void consumeCurrentItem() {
+        currentEquipedItem.Quantity--;
+        updateUI(currentEquipedItem);
+    }
+    public void obtenerItem(ItemVariable itemObtenido) {
+        itemObtenido.Quantity++;
+        updateUI(currentEquipedItem);
     }
 }

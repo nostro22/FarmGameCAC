@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public UnityEvent PlayerNextItemEvent;
     public UnityEvent PlayerPreviusItemEvent;
     public UnityEvent PlayerTimeJump;
+    public UnityEvent PlayerBuyEvent;
     private bool canDash = true;
     private bool playerCollision;
     [SerializeField] private float DashTime=0.5f;
@@ -73,7 +74,8 @@ public class PlayerMovement : MonoBehaviour
         playerControls.Player.Water.performed += OnWatering;
        playerControls.Player.Dash.performed += Dashing;
        playerControls.Player.Interaction.performed += Interacting;
-       playerControls.Player.PreviousItem.performed += OnNextItem;
+        playerControls.Player.Interaction.performed += Buying;
+        playerControls.Player.PreviousItem.performed += OnNextItem;
        playerControls.Player.NextItem.performed += OnPreviusItem;
        playerControls.Player.ChangeWeapon.performed += OnChangeWeaponType;
        playerControls.Player.TimeJump.performed += OnTimeJump;
@@ -130,9 +132,31 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Interacting(InputAction.CallbackContext context) {
         
-        PlayerInteracEvent.Invoke();    
+        
+        PlayerInteracEvent.Invoke();
        // print("interacted");
 
+    }
+
+    private void Buying(InputAction.CallbackContext context) {
+
+
+        PlayerBuyEvent.Invoke();
+        // print("interacted");
+
+    }
+
+    public void BuyingState() {
+
+        playerControls.Player.Interaction.performed -= Interacting;
+        playerControls.Player.Shoot.performed -= OnShoot;
+        playerControls.Player.Water.performed -= OnWatering;
+    }
+    public void NormalState() {
+
+        playerControls.Player.Interaction.performed += Interacting;
+        playerControls.Player.Shoot.performed += OnShoot;
+        playerControls.Player.Water.performed += OnWatering;
     }
 
     void Update()

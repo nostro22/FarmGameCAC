@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
     {
         cantidad += 10;
         cantidadRestante = cantidad;
-        Debug.Log(cantidadRestante);
+       // Debug.Log(cantidadRestante);
         StartCoroutine(SpawnEnemy());
     }
 

@@ -176,6 +176,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7004486004624151942, guid: e0985e1223669b24eb620e3dd786048a, type: 3}
+      propertyPath: itemsToPool.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004486004624151942, guid: e0985e1223669b24eb620e3dd786048a, type: 3}
+      propertyPath: itemsToPool.Array.data[3].amountToPool
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004486004624151942, guid: e0985e1223669b24eb620e3dd786048a, type: 3}
+      propertyPath: itemsToPool.Array.data[3].objectToPool
+      value: 
+      objectReference: {fileID: 2511532250402491366, guid: 56eb098caf73665489ec3a460676ca0b, type: 3}
     - target: {fileID: 7291378822814844928, guid: e0985e1223669b24eb620e3dd786048a, type: 3}
       propertyPath: m_Name
       value: ObjectPooler
@@ -19298,34 +19310,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 752357144072962048, guid: cbd7dbeac6785c94fa808f22dcf91b0d, type: 3}
   m_PrefabInstance: {fileID: 351171808}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &340715975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39819129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fa5409472042e040a0c6cdadcae9969, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c82561cd93145e542b41b76c47fa9ece, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 39819129}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &351171808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19385,10 +19369,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6785050189555378683, guid: cbd7dbeac6785c94fa808f22dcf91b0d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 340715975}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbd7dbeac6785c94fa808f22dcf91b0d, type: 3}
 --- !u!1 &362030783
 GameObject:
@@ -19681,64 +19662,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 297d819339eb22b48a9566aa359d2d34, type: 3}
---- !u!1001 &773774350
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1427529592593598952, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_Name
-      value: PlantaTorreta
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8343998844988380697, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1785844883696456616, guid: 1e3f671343711a34481c37daa4418234, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e3f671343711a34481c37daa4418234, type: 3}
 --- !u!1 &901327067
 GameObject:
   m_ObjectHideFlags: 0
@@ -22982,10 +22905,6 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 39819129}
-    - target: {fileID: 6807546882840646392, guid: 85f48b565bdf52e46bcc890592a3ff77, type: 3}
-      propertyPath: _plantaTorreta
-      value: 
-      objectReference: {fileID: 1427529592593598952, guid: 1e3f671343711a34481c37daa4418234, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23043,30 +22962,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TorretSeedProvider
       objectReference: {fileID: 0}
-    - target: {fileID: 6510570712869437661, guid: 68b7fbf2441dff14bbf5dd74f859442a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8576517623273471452, guid: 68b7fbf2441dff14bbf5dd74f859442a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8576517623273471452, guid: 68b7fbf2441dff14bbf5dd74f859442a, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8576517623273471452, guid: 68b7fbf2441dff14bbf5dd74f859442a, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1803949509}
-    - target: {fileID: 8576517623273471452, guid: 68b7fbf2441dff14bbf5dd74f859442a, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1803949509}
-    - target: {fileID: 8576517623273471452, guid: 68b7fbf2441dff14bbf5dd74f859442a, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: equipItem
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23222,21 +23121,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6289636743185556293, guid: 46ec5c5aa61b66244b7fe9e85cf90d35, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6289636743185556293, guid: 46ec5c5aa61b66244b7fe9e85cf90d35, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1803949509}
-    - target: {fileID: 6289636743185556293, guid: 46ec5c5aa61b66244b7fe9e85cf90d35, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1803949509}
-    - target: {fileID: 6289636743185556293, guid: 46ec5c5aa61b66244b7fe9e85cf90d35, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: equipItem
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23262,5 +23149,4 @@ SceneRoots:
   - {fileID: 298903568}
   - {fileID: 1714188099}
   - {fileID: 8296997047274334240}
-  - {fileID: 773774350}
   - {fileID: 5461161517619882677}

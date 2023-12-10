@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlantaHP1 : PlantaHP {
+public class PlantaHP1 : PlantaHPBase {
     [SerializeField] public float HP;
 
     public bool ResetHP;
@@ -16,7 +16,6 @@ public class PlantaHP1 : PlantaHP {
     [SerializeField] private PlantaCiclo plantaCiclo; //Consigo el script de ciclo de esta instancia.
     private int etapa;
 
-    [SerializeField] public bool dead;
 
     [SerializeField] private PlantaPoder plantaPoder;
  
@@ -24,8 +23,10 @@ public class PlantaHP1 : PlantaHP {
     WaitForSeconds delay;
 
     private void Awake() {
-        dead = false;
+        Dead = false;
     }
+
+
 
     private void Start() {
         if (ResetHP) { //Inicializa la vida de la planta y le suma el valor a la variable de vida total de las plantas de vida, y a la variable de vida del jugador.
@@ -39,7 +40,7 @@ public class PlantaHP1 : PlantaHP {
     private void Update() {
 
         if (HP <= 0) {
-            dead = true; //La planta muere.
+            Dead = true; //La planta muere.
             DeathEvent.Invoke();
         }
     }
@@ -48,13 +49,19 @@ public class PlantaHP1 : PlantaHP {
         //print("colisiono");
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
 
-
         if (other.TryGetComponent<VelocidadAtaque>(out var velocidad))
         {
             delay = new WaitForSeconds(velocidad.velocidad);
 
             if (damage != null) {
                 StartCoroutine(RecibirDano(damage, delay));
+            }
+        }
+        if (other.TryGetComponent<HealDealer>(out var healer)) {
+            if (StartingHP.Value > HP + healer.HealAmount.Value) {
+                this.HP += healer.HealAmount.Value;
+            } else if (StartingHP.Value < HP + healer.HealAmount.Value) {
+                this.HP = StartingHP.Value;
             }
         }
     }
@@ -71,10 +78,18 @@ public class PlantaHP1 : PlantaHP {
 
     IEnumerator RecibirDano(DamageDealer _damage, WaitForSeconds _delay)
     {
-        while (HP > 0) {
+        while (HP > 0 && !_damage.Dead) {
             HP -= _damage.DamageAmount; //Daño aplicado a la propia planta.
             DamageEvent.Invoke();
             yield return _delay;
         }
+    }
+
+    public override float ObtenrVidaActual() {
+        return HP;
+    }
+
+    public override float ObtenrVidaMaxima() {
+        return StartingHP.Value;
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.PlayerLoop;
 using static UnityEngine.GraphicsBuffer;
 
 public class turretAttack : MonoBehaviour {
@@ -8,17 +9,12 @@ public class turretAttack : MonoBehaviour {
     [SerializeField] private Transform instanciatePlace;
     [SerializeField] private float activeHitDuration;
     [SerializeField] private float cooldown;
-    private bool canUse;
+    //[SerializeField] private Transform target;
+    private bool canUse=true;
 
-    // Start is called before the first frame update
-    void Start() {
-        canUse = true;
-    }
-    private void Update() {
-        if (EnemyPool.pool.Count > 0) {
-            var posicionEnemigo = EnemyPool.EnemigoMasCercano(transform.position);
-            Vector3 direction = (posicionEnemigo.transform.position - instanciatePlace.position).normalized;
-            instanciatePlace.rotation = Quaternion.LookRotation(posicionEnemigo.transform.position);
+    void Update() {
+        if (canUse) {
+            skillStart();
         }
     }
 
@@ -28,19 +24,30 @@ public class turretAttack : MonoBehaviour {
     }
 
 
-    IEnumerator SkillStart() {
-        GameObject pooledPrefab = ObjectPooler.SharedInstance.GetPooledObject(tagToPool);
-        if (pooledPrefab != null && canUse) {
-            pooledPrefab.transform.SetPositionAndRotation(instanciatePlace.position, transform.parent.rotation);
-            canUse = false;
-            pooledPrefab.SetActive(true);
-            yield return null;
-            StartCoroutine(CooldownCoroutine());
-        }
+    IEnumerator SkillStartCorrutine() {
+           
+        if (EnemyPool.pool.Count > 0) {
+            print("Entre Enemigo");
+            var posicionEnemigo = EnemyPool.EnemigoMasCercano(transform.position);
+            GameObject pooledPrefab = ObjectPooler.SharedInstance.GetPooledObject(tagToPool);
+            Vector3 direction = (posicionEnemigo.transform.position - instanciatePlace.position);
+            float angle =  Mathf.Atan2(direction.y,direction.x)*Mathf.Rad2Deg;
+            Quaternion quaternionFinalDirection = Quaternion.AngleAxis(angle,Vector3.forward);
+
+            if (pooledPrefab != null) {
+                pooledPrefab.transform.SetPositionAndRotation(instanciatePlace.position, quaternionFinalDirection);
+                
+                canUse = false;
+                print("Entre bala");
+                    pooledPrefab.SetActive(true);
+                    yield return null;
+                    StartCoroutine(CooldownCoroutine());
+                }
+          }
     }
 
     public void skillStart() {
-        StartCoroutine(SkillStart());
+        StartCoroutine(SkillStartCorrutine());
     }
 
 }

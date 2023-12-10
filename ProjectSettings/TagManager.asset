@@ -9,6 +9,7 @@ TagManager:
   - enemyHurtParticle
   - Timer
   - Enemy
+  - TurretBullet
   layers:
   - Default
   - TransparentFX

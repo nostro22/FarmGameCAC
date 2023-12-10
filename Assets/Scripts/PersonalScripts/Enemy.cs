@@ -1,24 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour , IDamageable
 {
-    [SerializeField] protected float MaxHP = 100;
+    [SerializeField] public float MaxHP = 100;
     [SerializeField] BoxCollider2D Collider2D;
-    [field:SerializeField]
+    private DamageDealer myDamageDealer;
+    [field: SerializeField]
+    private void Awake() {
+        myDamageDealer = GetComponent<DamageDealer>();
+    }
     public float health { get; set; }
 
     private void OnEnable() {
+        myDamageDealer.Dead = false;
         health = MaxHP;
     }
+
 
     public void Damage(float damageAmount) {
        this.health -= damageAmount;
         Hurtparticle();
         if (this.health <= 0) {
+            myDamageDealer.Dead=true;
             gameObject.SetActive(false);
         }
     }

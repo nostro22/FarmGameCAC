@@ -21,7 +21,6 @@ public class PlantaPoder : MonoBehaviour
 
         etapa = plantaCiclo.etapa;
         poderActual = poderTotal / divisores[etapa];
-        Debug.Log("No hace nada.");
     }
 
     // Update is called once per frame

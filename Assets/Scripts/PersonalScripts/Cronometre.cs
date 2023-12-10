@@ -23,7 +23,6 @@ public class Cronometre : MonoBehaviour {
         tiempoRestante = float.Parse(tiempoCiclo.Value);
         //Debug.Log(tiempoRestante);
         StartDay.Invoke();
-        Debug.Log("Invoque día.");
     }
 
     public void TimeJump() {

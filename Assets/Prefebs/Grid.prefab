@@ -2015,7 +2015,7 @@ MonoBehaviour:
   highlightTile: {fileID: 11400000, guid: 0cbca03a6f2aee54eb7fed4e77409ab8, type: 2}
   jugador: {fileID: 0}
   _plantaVida: {fileID: 6081213901243816359, guid: 953e1999626b7cb4e9fbc978169702dc, type: 3}
-  _plantaTorreta: {fileID: 0}
+  _plantaTorreta: {fileID: 1427529592593598952, guid: 1e3f671343711a34481c37daa4418234, type: 3}
   _plantaMina: {fileID: 0}
   _plantaGranada: {fileID: 0}
   _fertilizante: {fileID: 0}

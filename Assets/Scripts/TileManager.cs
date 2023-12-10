@@ -57,7 +57,7 @@ public class TileManager : MonoBehaviour {
                 RaycastHit2D hit = Physics2D.Raycast(posicionActual2d, Vector2.up, distanciaRaycast, layerMask);
                 if (hit.collider != null) { //Si el raycast encuentra algo en el layer "Planta"...
                     GameObject plantaASacrificar = hit.transform.gameObject;
-                    plantaASacrificar.GetComponent<PlantaHP>().dead = true;
+                    plantaASacrificar.GetComponent<PlantaHPBase>().Dead = true;
                 }
             }
             posicionAnteriorFloat = jugador.transform.position; //Se actualiza la posición anterior.

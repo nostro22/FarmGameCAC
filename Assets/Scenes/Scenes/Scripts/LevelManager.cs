@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ButtonStart()
     {
         SceneManager.LoadScene(1);
@@ -26,5 +14,14 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Salir");
         Application.Quit();
+    }
+    public void ButtonTry() {
+        SceneManager.LoadScene(1);
+    }
+    public void ButtonMenu() {
+        SceneManager.LoadScene(0);
+    }
+    public void LostScene() {
+        SceneManager.LoadScene(2);
     }
 }

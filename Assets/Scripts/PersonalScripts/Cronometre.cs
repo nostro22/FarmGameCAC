@@ -36,7 +36,7 @@ public class Cronometre : MonoBehaviour {
     void Update() {
         if (esDeDia) {
             tiempoRestante = (float)tiempoRestante - Time.deltaTime;
-            tiempoUI.Value = tiempoRestante.ToString();
+            tiempoUI.Value = tiempoRestante.ToString("00");
 
             if (tiempoRestante <= 0) {
                 StartNight.Invoke();
@@ -46,7 +46,8 @@ public class Cronometre : MonoBehaviour {
         }
 
         if (!esDeDia && enemySpawner!=null && enemySpawner.cantidadRestante == 0) {
-            tiempoRestante = 0;
+            print("mate a todos los gatos");
+            tiempoRestante = float.Parse(tiempoCiclo.Value);
             StartDay.Invoke();
             cantidadDeDias++;
             esDeDia = true;

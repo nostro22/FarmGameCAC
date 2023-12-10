@@ -10,6 +10,12 @@ EditorBuildSettings:
     guid: 3a1c1a4a47561544ba3e5769d69963e7
   - enabled: 1
     path: Assets/Scenes/Game.unity
+    guid: 51f61729f075b1d4d9afe56a35e67d4b
+  - enabled: 1
+    path: Assets/Scenes/MenuLost.unity
+    guid: fef028c45a3b2a0468dfe63aed40beb1
+  - enabled: 1
+    path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f4508e1b72d79d14bb4ce4916cf341b8, type: 2}

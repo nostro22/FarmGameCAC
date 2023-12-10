@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour , IDamageable
 {
     [SerializeField] public float MaxHP = 100;
     [SerializeField] BoxCollider2D Collider2D;
+    [SerializeField] UnityEvent deathEvent;
     private DamageDealer myDamageDealer;
     [field: SerializeField]
     private void Awake() {
@@ -22,6 +24,7 @@ public class Enemy : MonoBehaviour , IDamageable
         Hurtparticle();
         if (this.health <= 0) {
             myDamageDealer.Dead=true;
+            deathEvent?.Invoke();
             gameObject.SetActive(false);
         }
     }

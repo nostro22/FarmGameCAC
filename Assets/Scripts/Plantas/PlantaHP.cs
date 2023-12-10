@@ -34,13 +34,12 @@ public class PlantaHP : PlantaHPBase
     }
 
     private void Update() {
-        if (Dead && HP > 0) {
-            playerHealth.ApplyChange(-HP);
-            plantHealth.ApplyChange(-totalHP);
-        }
-        if (HP <= 0) {
+      
+        if (HP <= 0 || (Dead && HP > 0)) {
             Dead = true; //La planta muere.
             DeathEvent.Invoke();
+            playerHealth.ApplyChange(-totalHP);
+            plantHealth.ApplyChange(-totalHP);
         }
     }
 
@@ -79,7 +78,7 @@ public class PlantaHP : PlantaHPBase
     {
         while (HP > 0 && !_damage.Dead) {
             HP -= _damage.DamageAmount; //Daño aplicado a la propia planta.
-            playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
+            //playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
             DamageEvent.Invoke();
             yield return _delay;
         }

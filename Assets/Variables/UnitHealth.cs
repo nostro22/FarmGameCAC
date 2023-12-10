@@ -24,7 +24,8 @@ public class UnitHealth : MonoBehaviour
 
     private void Update()
     {
-        if (cronometre.cantidadDeDias != 1 && cronometre.cantidadDeNoches != 0 && HP.Value <= 0) {
+        if (cronometre.cantidadDeNoches != 0 && HP.Value <= 0) {
+            print("mori ramona");
             DeathEvent.Invoke();
         }
     }
@@ -35,8 +36,8 @@ public class UnitHealth : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
          other.gameObject.TryGetComponent<DamageDealer>(out var damage);
         if (damage != null && other.CompareTag("Enemy")) {
-            HP.ApplyChange(-damage.DamageAmount);
-            DamageEvent.Invoke();
+          //  HP.ApplyChange(-damage.DamageAmount);
+           // DamageEvent.Invoke();
         }
     }
 }

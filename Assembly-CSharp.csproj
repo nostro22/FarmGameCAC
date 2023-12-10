@@ -57,6 +57,8 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Variables\SimpleUnitHealth.cs" />
      <Compile Include="Assets\Scripts\PersonalScripts\ObjectPooler.cs" />
+     <Compile Include="Assets\Scripts\Plantas\EnemyPool.cs" />
+     <Compile Include="Assets\Variables\BaseVariable.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -64,15 +66,18 @@
      <Compile Include="Assets\Variables\TextReplacer.cs" />
      <Compile Include="Assets\Scripts\Plantas\PlantaAnimacion.cs" />
      <Compile Include="Assets\Variables\StringReference.cs" />
+     <Compile Include="Assets\Scripts\PersonalScripts\turretAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerInputActions.cs" />
      <Compile Include="Assets\Interfaces\IDamageable.cs" />
      <Compile Include="Assets\Scripts\PersonalScripts\usingSkill.cs" />
+     <Compile Include="Assets\ItemSellStand.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Plantas\PlantaPoder.cs" />
      <Compile Include="Assets\Events\GameEventListener.cs" />
+     <Compile Include="Assets\Scripts\Plantas\PlantaHP1.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\Scripts\PersonalScripts\usingMelee.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _enemy;
+    [SerializeField] private List<GameObject> _enemy;
 
     WaitForSeconds delay = new WaitForSeconds(2);
     private int cantidad;
@@ -27,6 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemy()
     {
+        int randomEnemy = 0;
         int i = 0;
         while (i < cantidad) {
             Vector3 posicionSpawn = Random.onUnitSphere;
@@ -35,7 +36,9 @@ public class EnemySpawner : MonoBehaviour
             posicionSpawn.x = posicionSpawn.x * Random.Range(10, 12);
             posicionSpawn.y = posicionSpawn.y * Random.Range(4, 6);
 
-            Instantiate(_enemy, posicionSpawn, Quaternion.identity);
+            randomEnemy=Random.Range(0,_enemy.Count);
+
+            Instantiate(_enemy[randomEnemy], posicionSpawn, Quaternion.identity);
             i++;
             yield return delay;
         }

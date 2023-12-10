@@ -17,6 +17,6 @@ MonoBehaviour:
   hitDuration: 1
   coolDown: 0.5
   colliderScale: {x: 1, y: 1}
-  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  icon: {fileID: 21300000, guid: c9faadf91b607814c9f998ba220dc7df, type: 3}
   price: 100
   damage: 20

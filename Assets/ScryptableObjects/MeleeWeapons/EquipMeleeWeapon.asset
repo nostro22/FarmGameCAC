@@ -13,13 +13,10 @@ MonoBehaviour:
   m_Name: EquipMeleeWeapon
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  name: 
-  hitDuration: 1
-  coolDown: 1
+  name: Fists
+  hitDuration: 0.2
+  coolDown: 0.2
   colliderScale: {x: 1, y: 1}
-  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  price: 0
-  damage:
-    UseConstant: 1
-    ConstantValue: 100
-    Variable: {fileID: 0}
+  icon: {fileID: 21300000, guid: e68c5cf1c3e5d934d94c391b6e4cb996, type: 3}
+  price: 100
+  damage: 20

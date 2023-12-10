@@ -27,8 +27,6 @@ public class usingSkill : MonoBehaviour {
             pooledPrefab.SetActive(true);
             yield return null;
             StartCoroutine(CooldownCoroutine());
-            yield return new WaitForSeconds(activeHitDuration);
-            pooledPrefab.SetActive(false);
         }
     }
 

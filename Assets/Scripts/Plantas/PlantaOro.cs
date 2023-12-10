@@ -10,7 +10,7 @@ public class PlantaOro : MonoBehaviour
     private int oroADevolver;
     private int[] divisores;
     [SerializeField] private PlantaHP plantaHP;
-
+    [SerializeField] private ItemVariable plantaSO;
     [SerializeField] private FloatVariable oro;
 
     // Start is called before the first frame update
@@ -34,6 +34,8 @@ public class PlantaOro : MonoBehaviour
 
             if (oroADevolver == 1) {
                 Debug.Log("Devolver semilla.");
+                plantaSO.Quantity++;
+
             } else {
                 Debug.Log("Devolver " + oroADevolver + " monedas de oro.");
                 oro.ApplyChange(oroADevolver);

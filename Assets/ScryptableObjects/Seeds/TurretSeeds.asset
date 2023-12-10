@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TurretSeeds
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  cantity: 0
-  name: Turret seed
+  quantity: 1
+  name: Turret plant
   icon: {fileID: -514207625, guid: cb801aaaf83eaa9418318006f5c15c7b, type: 3}
-  price: 0
+  price: 50

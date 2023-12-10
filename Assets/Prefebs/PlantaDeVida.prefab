@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3751945790719715057}
   - component: {fileID: -1626168477228123150}
   - component: {fileID: -7353871691554636462}
-  m_Layer: 6
+  m_Layer: 20
   m_Name: PlantaDeVida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,9 +81,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 619248271
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -105541197
+  m_SortingLayer: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 649809171, guid: cb801aaaf83eaa9418318006f5c15c7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -363,6 +363,7 @@ MonoBehaviour:
   plantaCiclo: {fileID: -1548719012987381569}
   oroTotal: 300
   plantaHP: {fileID: -6672134723712530258}
+  plantaSO: {fileID: 11400000, guid: 253cc075978636447acf0d7d408a8dd5, type: 2}
   oro: {fileID: 11400000, guid: 5cc5bef2a6262f84db317cfc1890bb63, type: 2}
 --- !u!114 &-1626168477228123150
 MonoBehaviour:

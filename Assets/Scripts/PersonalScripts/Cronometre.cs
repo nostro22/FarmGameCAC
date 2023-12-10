@@ -26,6 +26,13 @@ public class Cronometre : MonoBehaviour {
         Debug.Log("Invoque día.");
     }
 
+    public void TimeJump() {
+        StartNight.Invoke();
+        cantidadDeNoches++;
+        esDeDia = false;
+        tiempoRestante = 0;
+    }
+
     // Update is called once per frame
     void Update() {
         if (esDeDia) {
@@ -39,8 +46,8 @@ public class Cronometre : MonoBehaviour {
             }
         }
 
-        if (!esDeDia && enemySpawner.cantidadRestante == 0) {
-            tiempoRestante = float.Parse(tiempoCiclo.Value);
+        if (!esDeDia && enemySpawner!=null && enemySpawner.cantidadRestante == 0) {
+            tiempoRestante = 0;
             StartDay.Invoke();
             cantidadDeDias++;
             esDeDia = true;

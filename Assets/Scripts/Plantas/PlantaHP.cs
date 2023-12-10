@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class PlantaHP : MonoBehaviour
 {
+    [SerializeField] public StringReference nombre;
     [SerializeField] public float HP;
 
     public bool ResetHP;
@@ -34,16 +35,19 @@ public class PlantaHP : MonoBehaviour
     private void Start() {
         if (ResetHP) { //Inicializa la vida de la planta y le suma el valor a la variable de vida total de las plantas de vida, y a la variable de vida del jugador.
             HP = StartingHP.Value;
-            playerHealth.ApplyChange(HP);
-            plantHealth.ApplyChange(HP);
-            totalHP = StartingHP.Value;
+
+            if (nombre == "Planta Vida") {
+                playerHealth.ApplyChange(HP);
+                plantHealth.ApplyChange(HP);
+                totalHP = StartingHP.Value;
+            }
         }
         
         etapa = plantaCiclo.etapa;
     }
 
     private void Update() {
-        if (dead && HP > 0) {
+        if (nombre == "Planta Vida" && dead && HP > 0) {
             playerHealth.ApplyChange(-HP);
             plantHealth.ApplyChange(-totalHP);
         }
@@ -57,7 +61,6 @@ public class PlantaHP : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         //print("colisiono");
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-
 
         if (other.TryGetComponent<VelocidadAtaque>(out var velocidad))
         {
@@ -74,10 +77,13 @@ public class PlantaHP : MonoBehaviour
         etapa = plantaCiclo.etapa;
         if (etapa <= 3) { //Actualiza la vida de la planta y del jugador.
             HP += plantaPoder.poderActual;
-            playerHealth.ApplyChange(plantaPoder.poderActual);
-            plantHealth.ApplyChange(plantaPoder.poderActual);
-            totalHP += plantaPoder.poderActual;
-            Debug.Log("Tiene una vida de " + HP + ".");
+            
+            if (nombre == "Planta Vida") {
+                playerHealth.ApplyChange(plantaPoder.poderActual);
+                plantHealth.ApplyChange(plantaPoder.poderActual);
+                totalHP += plantaPoder.poderActual;
+                Debug.Log("Tiene una vida de " + HP + ".");
+            }
         }
     }
 
@@ -85,7 +91,11 @@ public class PlantaHP : MonoBehaviour
     {
         while (HP > 0) {
             HP -= _damage.DamageAmount; //Daño aplicado a la propia planta.
-            playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
+
+            if (nombre == "Planta Vida") {
+                playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
+            }
+            
             DamageEvent.Invoke();
             yield return _delay;
         }

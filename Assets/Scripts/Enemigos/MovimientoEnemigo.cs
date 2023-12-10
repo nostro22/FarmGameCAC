@@ -20,7 +20,7 @@ public class MovimientoEnemigo : MonoBehaviour
     void Start()
     {
         variacion = Random.Range(0.5f, 1.5f);
-        WalkAnimation();
+        //WalkAnimation();
     }
 
     // Update is called once per frame
@@ -45,13 +45,13 @@ public class MovimientoEnemigo : MonoBehaviour
     }
 
 
-    public void WalkAnimation()
+    /*public void WalkAnimation()
     {
         animator.SetBool("hasAttacking", false);
     }
 
     public void AttackAnimation() {
         animator.SetBool("hasAttacking", true);
-    }
+    }*/
 
 }

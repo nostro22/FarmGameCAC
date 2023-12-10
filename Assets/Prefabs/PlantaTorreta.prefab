@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6213006968563606221}
   - component: {fileID: 2995442163593974899}
   - component: {fileID: 7268569623821989651}
+  - component: {fileID: 2894968234986931384}
   - component: {fileID: 6033535647504234044}
   - component: {fileID: 5497719539133662847}
   - component: {fileID: 7250594868554188711}
@@ -20,7 +21,6 @@ GameObject:
   - component: {fileID: 3003885713749098188}
   - component: {fileID: 726886661503088802}
   - component: {fileID: 1455960170739025051}
-  - component: {fileID: 5415683150456734109}
   m_Layer: 20
   m_Name: PlantaTorreta
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -105541197
   m_SortingLayer: 1
-  m_SortingOrder: -2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 80907235, guid: 2fdf9af76d800ae47ba3faa7ee423ba0, type: 3}
   m_Color: {r: 0.9245283, g: 0.8874667, b: 0.06541473, a: 1}
   m_FlipX: 0
@@ -162,6 +162,63 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2894968234986931384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427529592593598952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c49ecccf8dd32438c30c00505d0a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombre:
+    UseConstant: 1
+    ConstantValue: Planta Torreta
+    Variable: {fileID: 0}
+  HP: 100
+  ResetHP: 1
+  StartingHP:
+    UseConstant: 1
+    ConstantValue: 100
+    Variable: {fileID: 0}
+  DamageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e45a0a6223dce9248b3be5f30f0c4540, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ed03db09037ffc1409e97f091b00dbd6, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  plantaCiclo: {fileID: 6033535647504234044}
+  dead: 0
+  plantaPoder: {fileID: 3760260549854037073}
+  playerHealth: {fileID: 11400000, guid: 865988d111b5fd24d827dc617c977b10, type: 2}
+  plantHealth: {fileID: 11400000, guid: 185d070119481ea46b57c7d94e3ed010, type: 2}
 --- !u!114 &6033535647504234044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantaCiclo: {fileID: 6033535647504234044}
   oroTotal: 300
-  plantaHP: {fileID: 5415683150456734109}
+  plantaHP: {fileID: 2894968234986931384}
   plantaSO: {fileID: 11400000, guid: 79c872506b61770479b229971806f718, type: 2}
   oro: {fileID: 11400000, guid: 5cc5bef2a6262f84db317cfc1890bb63, type: 2}
 --- !u!114 &726886661503088802
@@ -340,98 +397,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5415683150456734109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427529592593598952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e76ae02b265f8924281094c8034a015d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  ResetHP: 1
-  StartingHP:
-    UseConstant: 1
-    ConstantValue: 100
-    Variable: {fileID: 0}
-  DamageEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: e45a0a6223dce9248b3be5f30f0c4540, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DeathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: ed03db09037ffc1409e97f091b00dbd6, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plantaCiclo: {fileID: 6033535647504234044}
-  dead: 0
-  plantaPoder: {fileID: 3760260549854037073}
-  playerHealth: {fileID: 0}
-  plantHealth: {fileID: 0}
-  HP: 100
-  ResetHP: 1
-  StartingHP:
-    UseConstant: 1
-    ConstantValue: 100
-    Variable: {fileID: 0}
-  DamageEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: e45a0a6223dce9248b3be5f30f0c4540, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  DeathEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: ed03db09037ffc1409e97f091b00dbd6, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  plantaCiclo: {fileID: 6033535647504234044}
-  dead: 0
-  plantaPoder: {fileID: 3760260549854037073}
 --- !u!1 &1785844883696456616
 GameObject:
   m_ObjectHideFlags: 0

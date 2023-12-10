@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -105541197
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 649809171, guid: cb801aaaf83eaa9418318006f5c15c7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -278,6 +278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c49ecccf8dd32438c30c00505d0a32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombre:
+    UseConstant: 1
+    ConstantValue: Planta Vida
+    Variable: {fileID: 0}
   HP: 100
   ResetHP: 1
   StartingHP:

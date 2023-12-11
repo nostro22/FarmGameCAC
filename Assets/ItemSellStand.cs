@@ -27,7 +27,7 @@ public class ItemSellStand : MonoBehaviour
         }
     }
     public void buy() {
-        if (canBuy && Item.Price < GoldBag.Value ) { 
+        if (canBuy && Item.Price <= GoldBag.Value ) { 
         print("Ibuy");
             GoldBag.Value-=Item.Price;
             Item.Quantity++;

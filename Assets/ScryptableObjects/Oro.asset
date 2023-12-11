@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Oro
   m_EditorClassIdentifier: 
   DeveloperDescription: Almacena el oro del jugador.
-  Value: 992424
+  Value: 200

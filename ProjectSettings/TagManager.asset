@@ -10,6 +10,7 @@ TagManager:
   - Timer
   - Enemy
   - TurretBullet
+  - Watering
   layers:
   - Default
   - TransparentFX

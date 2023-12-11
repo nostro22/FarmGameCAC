@@ -241,9 +241,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -105541197
   m_SortingLayer: 1
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 80907235, guid: 2fdf9af76d800ae47ba3faa7ee423ba0, type: 3}
-  m_Color: {r: 0.9245283, g: 0.8874667, b: 0.06541473, a: 1}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -1846132742, guid: 906bcb9821d636b49b9a6893b5304c9c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -285,11 +285,11 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1289062, y: 0.93359375}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.2565217, y: 1.047826}
     newSize: {x: 1.1289062, y: 0.93359375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -562,7 +562,7 @@ MonoBehaviour:
   tagToPool: TurretBullet
   instanciatePlace: {fileID: 6429901897110431592}
   activeHitDuration: 2
-  cooldown: 0.5
+  cooldown: 2
 --- !u!1 &4614489764743797653
 GameObject:
   m_ObjectHideFlags: 0

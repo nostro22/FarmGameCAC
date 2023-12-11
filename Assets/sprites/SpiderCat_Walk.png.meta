@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: d2ab368e40b63404ea5539868fabbb40
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpiderCat_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1144
+        width: 401
+        height: 488
+      alignment: 9
+      pivot: {x: 0.8174217, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4d048ac0e4c78438d75f3d72070f69
+      internalID: -1758014624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1151
+        width: 331
+        height: 480
+      alignment: 9
+      pivot: {x: 0.7807217, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e921865424c2c49bf610fc5104ba16
+      internalID: 1288861675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1146
+        width: 311
+        height: 485
+      alignment: 9
+      pivot: {x: 0.7701251, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237aaa883f17bad458e0902e01b69f5e
+      internalID: 393014448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 1149
+        width: 327
+        height: 478
+      alignment: 9
+      pivot: {x: 0.7841558, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b8720f78ba6e4449909cd6a3f2724b
+      internalID: 2019403564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 1142
+        width: 382
+        height: 478
+      alignment: 9
+      pivot: {x: 0.7932247, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025622ff1715cf24ab93acab46a4e838
+      internalID: -1923455329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 1137
+        width: 422
+        height: 483
+      alignment: 9
+      pivot: {x: 0.82877237, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df70a37c07883c4094a8e3cc9238c1c
+      internalID: -1168760368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 619
+        width: 457
+        height: 480
+      alignment: 9
+      pivot: {x: 0.8258748, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa90c9f64d49f2642856952e68bcb37b
+      internalID: 521917642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 596
+        width: 496
+        height: 501
+      alignment: 9
+      pivot: {x: 0.7591916, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bc0b3834b6d274f9db32c6d3160281
+      internalID: 513533932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_8
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 596
+        width: 435
+        height: 503
+      alignment: 9
+      pivot: {x: 0.7662769, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f7b3ccab5ea9a4aa6a4cb88829cf0a
+      internalID: -1105053471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_9
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 581
+        width: 481
+        height: 516
+      alignment: 9
+      pivot: {x: 0.75404304, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3585bae7569c81f41b154632a9214db1
+      internalID: 2134225477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_10
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 596
+        width: 521
+        height: 494
+      alignment: 9
+      pivot: {x: 0.69300604, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9a85a74b32e4b42be04dd72f83c1c0
+      internalID: 1077758144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_11
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 40
+        width: 454
+        height: 482
+      alignment: 9
+      pivot: {x: 0.71027446, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d27bd20cda9ea4ea323487f0c65019
+      internalID: -562139828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_12
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 12
+        width: 500
+        height: 512
+      alignment: 9
+      pivot: {x: 0.70365787, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995e85e3f1baa1f4a9e17e896bfea33d
+      internalID: -717276706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_13
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 28
+        width: 541
+        height: 495
+      alignment: 9
+      pivot: {x: 0.6505788, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7648d75cb49ad4bbc59eebbe24a253
+      internalID: -504068556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_14
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 41
+        width: 426
+        height: 483
+      alignment: 9
+      pivot: {x: 0.6972043, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7bc9ee05756f74397d1466ba9fd5ef
+      internalID: -710081720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderCat_Walk_15
+      rect:
+        serializedVersion: 2
+        x: 2139
+        y: 44
+        width: 400
+        height: 483
+      alignment: 9
+      pivot: {x: 0.8213977, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be7f3a477a322cc49a730a47c85e7342
+      internalID: 263967873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpiderCat_Walk_0: -1758014624
+      SpiderCat_Walk_1: 1288861675
+      SpiderCat_Walk_10: 1077758144
+      SpiderCat_Walk_11: -562139828
+      SpiderCat_Walk_12: -717276706
+      SpiderCat_Walk_13: -504068556
+      SpiderCat_Walk_14: -710081720
+      SpiderCat_Walk_15: 263967873
+      SpiderCat_Walk_2: 393014448
+      SpiderCat_Walk_3: 2019403564
+      SpiderCat_Walk_4: -1923455329
+      SpiderCat_Walk_5: -1168760368
+      SpiderCat_Walk_6: 521917642
+      SpiderCat_Walk_7: 513533932
+      SpiderCat_Walk_8: -1105053471
+      SpiderCat_Walk_9: 2134225477
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,6 +7,6 @@ public class OroInventario : MonoBehaviour
     [SerializeField] private FloatVariable oro;
 
     void Awake() {
-        oro.SetValue(0); //Reinicia el oro al abrir el juego.
+        oro.SetValue(200); //Reinicia el oro al abrir el juego.
     }
 }

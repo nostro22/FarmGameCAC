@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9427f8062ca314944bef8f255fb902fd, type: 3}
+  m_Name: LifeSeeds
+  m_EditorClassIdentifier: 
+  DeveloperDescription: 
+  quantity: 0
+  name: Planta Vida
+  icon: {fileID: 1253191552, guid: 944c9ce3620d63c408ff7c49bb48e26d, type: 3}
+  price: 100

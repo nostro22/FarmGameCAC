@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeveloperDescription: 
   name: 
-  hitDuration: 0
-  coolDown: 0
-  colliderScale: {x: 0, y: 0}
+  hitDuration: 1
+  coolDown: 1
+  colliderScale: {x: 1, y: 1}
   icon: {fileID: 495004636, guid: cb801aaaf83eaa9418318006f5c15c7b, type: 3}
-  price: 0
-  damage: 0
+  price: 100
+  damage: 100

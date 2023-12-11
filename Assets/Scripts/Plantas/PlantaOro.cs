@@ -9,8 +9,8 @@ public class PlantaOro : MonoBehaviour
     private int etapa;
     private int oroADevolver;
     private int[] divisores;
-    [SerializeField] private PlantaHP plantaHP;
-
+    [SerializeField] private PlantaHPBase plantaHP;
+    [SerializeField] private ItemVariable plantaSO;
     [SerializeField] private FloatVariable oro;
 
     // Start is called before the first frame update
@@ -21,21 +21,20 @@ public class PlantaOro : MonoBehaviour
         divisores[1] = 4;
         divisores[2] = 2;
         divisores[3] = 1;
-        Debug.Log("ORO");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (plantaHP.dead) { //Si la planta muere, devuelve el oro correspondiente según su nivel. ¿Ver de vincular con un scriptable object de oro?
+        if (plantaHP.Dead) { //Si la planta muere, devuelve el oro correspondiente según su nivel. ¿Ver de vincular con un scriptable object de oro?
             etapa = plantaCiclo.etapa; //Guardo la etapa del script de ciclo.
 
             oroADevolver = oroTotal / divisores[etapa];
 
             if (oroADevolver == 1) {
-                Debug.Log("Devolver semilla.");
+                plantaSO.Quantity++;
+
             } else {
-                Debug.Log("Devolver " + oroADevolver + " monedas de oro.");
                 oro.ApplyChange(oroADevolver);
             }
 

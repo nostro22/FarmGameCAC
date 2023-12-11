@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: 1f0e0ec1a22996f4791e13b95be7ed97
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mudcat_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2249
+        width: 545
+        height: 251
+      alignment: 9
+      pivot: {x: 0.48804775, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ef16adfb9d4054db432070a1829d11
+      internalID: -559892174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2249
+        width: 552
+        height: 241
+      alignment: 9
+      pivot: {x: 0.48234934, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0740fd72b91bb4e9d3825e30100948
+      internalID: -672537583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 2248
+        width: 559
+        height: 234
+      alignment: 9
+      pivot: {x: 0.47630918, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3690f890c109e5d4db198a9a4f1e523b
+      internalID: -1562609522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 2248
+        width: 554
+        height: 226
+      alignment: 9
+      pivot: {x: 0.48060802, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ede2d79b866da94ea5ae6fe45c1e279
+      internalID: -1987942835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2301
+        y: 2248
+        width: 555
+        height: 226
+      alignment: 9
+      pivot: {x: 0.4812091, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05dd4d1540a79543b657c0e9c2f4853
+      internalID: 1357155009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1975
+        width: 553
+        height: 225
+      alignment: 9
+      pivot: {x: 0.48147714, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bc4126a69fc7045883ce0e93af31c5
+      internalID: 2028033603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1973
+        width: 553
+        height: 226
+      alignment: 9
+      pivot: {x: 0.48294955, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5dfa5fbb4a0bfe4f9e4aedd269cdbd7
+      internalID: 1153458611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1973
+        width: 553
+        height: 225
+      alignment: 9
+      pivot: {x: 0.4854771, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5fd074bbe4e83b41b9858a0b8050f90
+      internalID: -308010097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 1970
+        width: 555
+        height: 225
+      alignment: 9
+      pivot: {x: 0.483275, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3c519e1c53f694cbcfbc47e97e77f1
+      internalID: 2144158328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 1973
+        width: 553
+        height: 225
+      alignment: 9
+      pivot: {x: 0.4814771, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004a3f68ac1e0674f91d23309939fcf8
+      internalID: 1564165664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1702
+        width: 548
+        height: 227
+      alignment: 9
+      pivot: {x: 0.48438436, y: 0.01}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a5e767f10bd544d9ef283359d2dfcf
+      internalID: 543506178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1698
+        width: 534
+        height: 223
+      alignment: 9
+      pivot: {x: 0.4986084, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab8554fb59b1a5499ab48e396c9608b
+      internalID: -231664378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1699
+        width: 526
+        height: 224
+      alignment: 9
+      pivot: {x: 0.50619173, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653d34983c373bc46b3fc069962c2f0c
+      internalID: -2102017942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1694
+        width: 501
+        height: 225
+      alignment: 9
+      pivot: {x: 0.5330759, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8588e252bbfcf734a8ab70123f898320
+      internalID: -17983878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 2308
+        y: 1702
+        width: 494
+        height: 224
+      alignment: 9
+      pivot: {x: 0.5422778, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06341e2b89faac458e3f74b927fab4f
+      internalID: -1644353979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1431
+        width: 491
+        height: 225
+      alignment: 9
+      pivot: {x: 0.54061633, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a22fab7b765f6468ccadeef46d941d
+      internalID: -1346716326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1428
+        width: 498
+        height: 223
+      alignment: 9
+      pivot: {x: 0.53628737, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d2cca8ed2deed40a16f4a4c981756e
+      internalID: 1214856618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1428
+        width: 513
+        height: 228
+      alignment: 9
+      pivot: {x: 0.5190192, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759758347cb1a9e4e8650b9676f590f5
+      internalID: 119132525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1419
+        width: 528
+        height: 234
+      alignment: 9
+      pivot: {x: 0.50273204, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7e60dec12d41645b6b5b043e612df2
+      internalID: -372058248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 1428
+        width: 536
+        height: 244
+      alignment: 9
+      pivot: {x: 0.49826688, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce9e0937e8951c49851c7e0504a5180
+      internalID: 45744379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 879
+        width: 620
+        height: 457
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e86279855db5141a4864e6cd296607
+      internalID: 284438679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 889
+        width: 545
+        height: 252
+      alignment: 9
+      pivot: {x: 0.48697218, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7ba229cf438914ab3f6aca0f9275a7
+      internalID: 1487419225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 890
+        width: 550
+        height: 241
+      alignment: 9
+      pivot: {x: 0.47740844, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f26cbdee7baa74f910cdefdecc21e7
+      internalID: -319869342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 879
+        width: 626
+        height: 464
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcc0df3e53041e43afec38c607abcde
+      internalID: -1802637599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 882
+        width: 625
+        height: 172
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20b411cf44d0ee4cbd6871d441cad8e
+      internalID: 187538987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 418
+        width: 555
+        height: 440
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7394e63ccd0302f47a7ccb36b25d4e0a
+      internalID: 1668672823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 405
+        width: 552
+        height: 354
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3ddcb82c5945d48bdb37f630214013
+      internalID: -74741664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 386
+        width: 602
+        height: 383
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f49c69594770d543a08a04d3f7b718c
+      internalID: 812636704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 1934
+        y: 384
+        width: 625
+        height: 384
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38f2681d0d297444aa3988c762e80ec
+      internalID: 884413452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 2608
+        y: 399
+        width: 585
+        height: 90
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351077447946e2b48a172b4ef33eb334
+      internalID: -1198820265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 42
+        width: 588
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e7f7235327f9b49a883332868cf78e
+      internalID: -422903619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 56
+        width: 543
+        height: 200
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4791dd1c3ea594fa43d8dda9fd3a6c
+      internalID: -1749947269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudcat_spritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 45
+        width: 546
+        height: 263
+      alignment: 9
+      pivot: {x: 0.4707409, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3305c00caaa934a45ac74feb6fef8182
+      internalID: 573361018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mudcat_spritesheet_0: -559892174
+      mudcat_spritesheet_1: -672537583
+      mudcat_spritesheet_10: 543506178
+      mudcat_spritesheet_11: -231664378
+      mudcat_spritesheet_12: -2102017942
+      mudcat_spritesheet_13: -17983878
+      mudcat_spritesheet_14: -1644353979
+      mudcat_spritesheet_15: -1346716326
+      mudcat_spritesheet_16: 1214856618
+      mudcat_spritesheet_17: 119132525
+      mudcat_spritesheet_18: -372058248
+      mudcat_spritesheet_19: 45744379
+      mudcat_spritesheet_2: -1562609522
+      mudcat_spritesheet_20: 284438679
+      mudcat_spritesheet_21: 1678744480
+      mudcat_spritesheet_22: -679135907
+      mudcat_spritesheet_23: -1163635235
+      mudcat_spritesheet_24: 1487419225
+      mudcat_spritesheet_25: -319869342
+      mudcat_spritesheet_26: -637670420
+      mudcat_spritesheet_27: 573707848
+      mudcat_spritesheet_28: -1802637599
+      mudcat_spritesheet_29: 187538987
+      mudcat_spritesheet_3: -1987942835
+      mudcat_spritesheet_30: -1218671005
+      mudcat_spritesheet_31: 1587946801
+      mudcat_spritesheet_32: -1220936873
+      mudcat_spritesheet_33: 1668672823
+      mudcat_spritesheet_34: -499814787
+      mudcat_spritesheet_35: -1992314747
+      mudcat_spritesheet_36: -58892754
+      mudcat_spritesheet_37: 830138583
+      mudcat_spritesheet_38: 1765785649
+      mudcat_spritesheet_39: -74741664
+      mudcat_spritesheet_4: 1357155009
+      mudcat_spritesheet_40: 812636704
+      mudcat_spritesheet_41: -405317610
+      mudcat_spritesheet_42: -2144516283
+      mudcat_spritesheet_43: -307898039
+      mudcat_spritesheet_44: 963527827
+      mudcat_spritesheet_45: 884413452
+      mudcat_spritesheet_46: -1265371334
+      mudcat_spritesheet_47: -1198820265
+      mudcat_spritesheet_48: 569465697
+      mudcat_spritesheet_49: 2044190031
+      mudcat_spritesheet_5: 2028033603
+      mudcat_spritesheet_50: -1620410141
+      mudcat_spritesheet_51: 1211959263
+      mudcat_spritesheet_52: 544038616
+      mudcat_spritesheet_53: -2013991474
+      mudcat_spritesheet_54: -758249567
+      mudcat_spritesheet_55: -1909924935
+      mudcat_spritesheet_56: -1975841968
+      mudcat_spritesheet_57: 683397540
+      mudcat_spritesheet_58: -1622910883
+      mudcat_spritesheet_59: -67268434
+      mudcat_spritesheet_6: 1153458611
+      mudcat_spritesheet_60: -871705448
+      mudcat_spritesheet_61: 438854044
+      mudcat_spritesheet_62: -379017518
+      mudcat_spritesheet_63: -1710910773
+      mudcat_spritesheet_64: 216472918
+      mudcat_spritesheet_65: 638812399
+      mudcat_spritesheet_66: -1147132285
+      mudcat_spritesheet_67: 1640805271
+      mudcat_spritesheet_68: 624838468
+      mudcat_spritesheet_69: -1401381864
+      mudcat_spritesheet_7: -308010097
+      mudcat_spritesheet_70: 1406840985
+      mudcat_spritesheet_71: -214448315
+      mudcat_spritesheet_72: 698514073
+      mudcat_spritesheet_73: -422903619
+      mudcat_spritesheet_74: -1749947269
+      mudcat_spritesheet_75: 573361018
+      mudcat_spritesheet_76: -1655820182
+      mudcat_spritesheet_8: 2144158328
+      mudcat_spritesheet_9: 1564165664
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

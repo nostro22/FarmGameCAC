@@ -24,8 +24,9 @@ public class UnitHealth : MonoBehaviour
 
     private void Update()
     {
-        if (cronometre.cantidadDeDias != 1 && cronometre.cantidadDeNoches != 0 && HP.Value == 0) {
-            DeathEvent?.Invoke();
+        if (cronometre.cantidadDeNoches != 0 && HP.Value <= 0) {
+            print("mori ramona");
+            DeathEvent.Invoke();
         }
     }
 
@@ -33,11 +34,10 @@ public class UnitHealth : MonoBehaviour
     //Si entendí mal, habría que ver que pasa si el jugador pierde más vida que las plantas. Podría ser un problema ya que comparten la vida.
     //Igual de momento sirve bien para testear el daño.
     private void OnTriggerEnter2D(Collider2D other) {
-        print("colisiono");
-        DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-        if (damage != null) {
-            HP.ApplyChange(-damage.DamageAmount);
-            DamageEvent.Invoke();
+         other.gameObject.TryGetComponent<DamageDealer>(out var damage);
+        if (damage != null && other.CompareTag("Enemy")) {
+          //  HP.ApplyChange(-damage.DamageAmount);
+           // DamageEvent.Invoke();
         }
     }
 }

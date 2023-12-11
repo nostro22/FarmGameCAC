@@ -4,31 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlantaHP : MonoBehaviour
+public class PlantaHP : PlantaHPBase
 {
     [SerializeField] public float HP;
-
     public bool ResetHP;
     public FloatReference StartingHP;
     public UnityEvent DamageEvent;
     public UnityEvent DeathEvent;
-
     private float totalHP;
-    
     [SerializeField] private PlantaCiclo plantaCiclo; //Consigo el script de ciclo de esta instancia.
     private int etapa;
-
-    [SerializeField] public bool dead;
-
     [SerializeField] private PlantaPoder plantaPoder;
-
     [SerializeField] private FloatVariable playerHealth; //Salud del jugador.
     [SerializeField] private FloatVariable plantHealth; //Total de salud máxima de todas las plantas de vida.
-
     WaitForSeconds delay;
 
     private void Awake() {
-        dead = false;
+        this.Dead = false;
     }
 
     private void Start() {
@@ -38,33 +30,34 @@ public class PlantaHP : MonoBehaviour
             plantHealth.ApplyChange(HP);
             totalHP = StartingHP.Value;
         }
-        
         etapa = plantaCiclo.etapa;
     }
 
     private void Update() {
-        if (dead && HP > 0) {
-            playerHealth.ApplyChange(-HP);
-            plantHealth.ApplyChange(-totalHP);
-        }
-
-        if (HP <= 0) {
-            dead = true; //La planta muere.
+      
+        if (HP <= 0 || (Dead && HP > 0)) {
+            Dead = true; //La planta muere.
             DeathEvent.Invoke();
+            playerHealth.ApplyChange(-totalHP);
+            plantHealth.ApplyChange(-totalHP);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        //print("colisiono");
         DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
-
-
         if (other.TryGetComponent<VelocidadAtaque>(out var velocidad))
         {
             delay = new WaitForSeconds(velocidad.velocidad);
-
             if (damage != null) {
                 StartCoroutine(RecibirDano(damage, delay));
+            }
+        }
+        if (other.TryGetComponent<HealDealer>(out var healer)) {
+            if (StartingHP.Value > HP + healer.HealAmount.Value) {
+                this.HP += healer.HealAmount.Value;
+            } else if(StartingHP.Value < HP + healer.HealAmount.Value)
+            {
+                this.HP = StartingHP.Value;
             }
         }
     }
@@ -83,11 +76,18 @@ public class PlantaHP : MonoBehaviour
 
     IEnumerator RecibirDano(DamageDealer _damage, WaitForSeconds _delay)
     {
-        while (HP > 0) {
+        while (HP > 0 && !_damage.Dead) {
             HP -= _damage.DamageAmount; //Daño aplicado a la propia planta.
-            playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
+            //playerHealth.ApplyChange(-_damage.DamageAmount); //Daño aplicado al jugador.
             DamageEvent.Invoke();
             yield return _delay;
         }
+    }
+    public override float ObtenrVidaActual() {
+        return HP;
+    }
+
+    public override float ObtenrVidaMaxima() {
+        return StartingHP.Value;
     }
 }

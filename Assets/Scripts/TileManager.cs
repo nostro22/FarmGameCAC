@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
-using System.Linq;
 using UnityEngine.Events;
 
 public class TileManager : MonoBehaviour {
@@ -13,9 +10,9 @@ public class TileManager : MonoBehaviour {
     private GameObject _planta = null; //La planta a instanciar.
     [SerializeField] private GameObject _plantaVida = null; //La planta a instanciar.
     [SerializeField] private GameObject _plantaTorreta = null; //La planta a instanciar.
-    [SerializeField] private GameObject _plantaMina = null; //La planta a instanciar.
-    [SerializeField] private GameObject _plantaGranada = null; //La planta a instanciar.
-    [SerializeField] private GameObject _fertilizante = null; //La planta a instanciar.
+    //[SerializeField] private GameObject _plantaMina = null; //La planta a instanciar.
+    //[SerializeField] private GameObject _plantaGranada = null; //La planta a instanciar.
+    //[SerializeField] private GameObject _fertilizante = null; //La planta a instanciar.
     [SerializeField] private StringReference currentItemName = null;
     [SerializeField] private StringReference currentItemQuantity = null;
     [SerializeField] private UnityEvent PlayerUseItem;
@@ -88,11 +85,14 @@ public class TileManager : MonoBehaviour {
                     _planta = _plantaTorreta;
                     break;
                 default:
+                    print("Fallo algo en el seteo del nombre del item, nombre recibido: " +currentItemName);
                     break;
             }
+            if (_planta != null) {
             PlayerUseItem.Invoke();
             _planta.GetComponent<SpriteRenderer>().sortingOrder = -(int)gridCellCenter.y;
             Instantiate(_planta, gridCellCenter, Quaternion.identity); //Instanciar planta.
+            }
         }
     }
 

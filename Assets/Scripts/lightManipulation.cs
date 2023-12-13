@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class LightManipulation : MonoBehaviour
+public class lightManipulation : MonoBehaviour
 {
-    [SerializeField] Light2D light;
+    [SerializeField] Light2D lightModification;
     [SerializeField] private Color nigthColor;
     [SerializeField] private Color dayColor;
 
     void Awake() {
-        light.color = dayColor;
+        lightModification.color = dayColor;
     }
     IEnumerator NigthCorrutine() {
         while (true) {
-            light.color = Color.Lerp(nigthColor, dayColor, 2 * Time.deltaTime);
+            lightModification.color = Color.Lerp(nigthColor, dayColor, 2 * Time.deltaTime);
             yield return null;
         }
     }
     IEnumerator DayCorrutine() {
         while (true) {
-            light.color = Color.Lerp(dayColor, nigthColor, 2 * Time.deltaTime);
+            lightModification.color = Color.Lerp(dayColor, nigthColor, 2 * Time.deltaTime);
             yield return null;
         }
     }

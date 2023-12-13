@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
     public UnityEvent PlayerTimeJump;
     public UnityEvent PlayerBuyEvent;
     private bool canDash = true;
-    private bool playerCollision;
     [SerializeField] private float DashTime=0.5f;
     [SerializeField] private Transform targetToRotateFoward;
 
@@ -42,15 +41,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     IEnumerator Dash() {
-        playerCollision = false;
         if (canDash) {
             moveSpeed = moveSpeed * 2;
             canDash = false;
-            playerCollision = false;
             yield return new WaitForSeconds(DashTime);
             canDash = true;
             moveSpeed = moveSpeed / 2;
-            playerCollision = true;
         }
     }
 

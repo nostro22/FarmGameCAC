@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LifeSeeds
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  quantity: 0
-  name: Planta Vida
+  quantity: 1
+  myName: Planta Vida
   icon: {fileID: 1253191552, guid: 944c9ce3620d63c408ff7c49bb48e26d, type: 3}
   price: 100

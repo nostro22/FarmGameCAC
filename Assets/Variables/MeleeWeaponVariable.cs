@@ -8,7 +8,7 @@ public class MeleeWeaponVariable : ScriptableObject {
     [Multiline]
     public string DeveloperDescription = "";
 #endif
-    [SerializeField] private string name;
+    [SerializeField] private string myName;
     [SerializeField] private float hitDuration;
     [SerializeField] private float coolDown;
     [SerializeField] private Vector2 colliderScale;
@@ -17,8 +17,8 @@ public class MeleeWeaponVariable : ScriptableObject {
     [SerializeField] private float damage;
 
     public string Name {
-        get { return name; }
-        set { name = value; }
+        get { return myName; }
+        set { myName = value; }
     }
     public float Damage {
         get { return damage; }

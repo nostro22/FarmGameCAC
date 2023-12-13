@@ -9,7 +9,7 @@ public class ItemVariable : ScriptableObject {
     public string DeveloperDescription = "";
 #endif
     [SerializeField] private int quantity;
-    [SerializeField] private string name;
+    [SerializeField] private string myName;
     [SerializeField] private Sprite icon;
     [SerializeField] private int price;
 
@@ -19,8 +19,8 @@ public class ItemVariable : ScriptableObject {
     }
 
     public string Name {
-        get { return name; }
-        set { name = value; }
+        get { return myName; }
+        set { myName = value; }
     }
 
     public Sprite Icon {

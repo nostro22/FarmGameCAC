@@ -8,7 +8,6 @@ public class Inventary : MonoBehaviour {
 
 
     [SerializeField] public List<ItemVariable> dayInventory = new List<ItemVariable>();
-    [SerializeField] public List<ItemVariable> nigthInventory = new List<ItemVariable>();
 
     private ItemVariable currentEquipedItem;
     public StringVariable currentEquipedName;
@@ -17,14 +16,11 @@ public class Inventary : MonoBehaviour {
     private int currentEquipedIndex;
 
     void Start() {
-        var firstPositiveItem = dayInventory.FirstOrDefault(item => item.Quantity > 0f);
-        if (firstPositiveItem != null) {
-            currentEquipedItem = firstPositiveItem;
+        currentEquipedItem = dayInventory.First();
             updateUI(currentEquipedItem);
-        } 
     }
 
-    public void updateUI(ItemVariable? displayItem) {
+    public void updateUI(ItemVariable displayItem) {
         if (displayItem != null) {
             currentEquipedName.Value = displayItem.Name;
             currentEquipedImage.Value = displayItem.Icon;
@@ -38,7 +34,9 @@ public class Inventary : MonoBehaviour {
         }
     }
 
+    //On E press
     public void nextItem() {
+        print("q " +dayInventory.Count);
         if (currentEquipedIndex + 1 < dayInventory.Count) {
             currentEquipedIndex++;
             currentEquipedItem = dayInventory[currentEquipedIndex];
@@ -52,6 +50,7 @@ public class Inventary : MonoBehaviour {
 
     }
 
+    //On Q press
     public void previusItem() {
         if (currentEquipedIndex - 1 >= 0) {
             currentEquipedIndex--;
@@ -59,6 +58,7 @@ public class Inventary : MonoBehaviour {
             updateUI(currentEquipedItem);
         } else {
             currentEquipedIndex = dayInventory.Count-1;
+            print("E " +(dayInventory.Count-1));
             currentEquipedItem = dayInventory[currentEquipedIndex];
             updateUI(currentEquipedItem);
         }

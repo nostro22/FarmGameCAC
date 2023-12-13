@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour , IDamageable
     [SerializeField] BoxCollider2D Collider2D;
     [SerializeField] UnityEvent deathEvent;
     private DamageDealer myDamageDealer;
-    [field: SerializeField]
     private void Awake() {
         myDamageDealer = GetComponent<DamageDealer>();
     }
